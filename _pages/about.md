@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>Eindhoven University of Technology</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: left
