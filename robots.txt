@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://zhongxinhu.github.io/sitemap.xml
+Sitemap: https://mavisval.github.io/sitemap.xml
