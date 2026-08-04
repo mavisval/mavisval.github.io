@@ -1,0 +1,11 @@
+/* Academic-theme palette overrides */
+$theme-color: #234b4b;
+$theme-color-dark: #143333;
+$theme-color-light: #3f6b67;
+$theme-color-lighter: #dce8e5;
+
+:root {
+  --global-theme-color: #{$theme-color};
+  --global-theme-color-dark: #{$theme-color-dark};
+  --global-theme-color-light: #{$theme-color-light};
+}
