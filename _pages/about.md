@@ -27,8 +27,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am Zhongxin Hu, a final PhD candidate at Eindhoven University of Technology. My research focuses on sustainable operations management, with an emphasis on circular business models such as remanufacturing and refurbishment that help firms make economically and environmentally beneficial operational decisions. My broader interests include equilibrium analysis and pricing in queueing systems, behavioral operations, and sequential games.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+Atlas 4.419, Eindhoven University of Technology
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Edit the `profile` property in this page's YAML header to update or hide contact details and social links. Edit `_bibliography/papers.bib` and Jekyll will render your [papers page](/al-folio/publications/) automatically.
+
+This site uses Font Awesome and Academicons for social icons. Add or remove links in the YAML header as needed.

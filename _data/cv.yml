@@ -1,189 +1,165 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Zhongxin Hu
+  label: PhD Candidate
+  email: z.hu1@tue.nl
+  location: Eindhoven, The Netherlands
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: "Final PhD candidate at Eindhoven University of Technology. My research focuses on sustainable operations management, studying circular business models such as remanufacturing and refurbishment to support economically and environmentally beneficial operational decisions. Broader interests include equilibrium analysis and pricing in queueing systems, behavioral operations, and sequential games."
 
-  social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
+  social_networks: []
 
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+    city: Eindhoven
+    countryCode: NL
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Eindhoven University of Technology (TU/e)
+        location: Eindhoven, the Netherlands
+        area: Operations Management
+        studyType: Ph.D. Candidate
+        start_date: 2023-07
+        end_date: Ongoing
         highlights:
-          - Description 1.
-          - Description 2.
+          - Supervisors: Z"{u}mb"{u}l Atan and Christina Imdahl
+          - Group: Operations, Planning, Accounting & Control (OPAC)
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: Beijing University of Posts and Telecommunications (BUPT)
+        location: Beijing, China
+        area: Mathematics
+        studyType: M.Sc.
+        start_date: 2020-09
+        end_date: 2023-06
         highlights:
-          - Description 1.
-          - Description 2.
+          - Supervisor: Yongjiang Guo
+          - Honor: Outstanding Graduate Student Award
+          - Thesis: "Information Disclosure and Reference Dependence in the Cooperative Newsvendor Problem"
+
+      - institution: Nanjing University of Posts and Telecommunications
+        location: Nanjing, China
+        area: Applied Statistics
+        studyType: B.Sc.
+        start_date: 2015-09
+        end_date: 2019-06
+        highlights:
+          - Honor: Merit Undergraduate Student Award
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-        highlights:
-          - Relativity
-          - Description 2.
+      - company: LINear to CIrcular Transition (LINCIT)
+        position: Researcher
+        start_date: 2023-07
+        end_date: 2026-06
+        summary: Studied operational decisions in circular business models (remanufacturing, refurbishment) and presented progress reports to consortium partners.
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
+      - company: Post-Graduate Innovation and Entrepreneurship Project
+        position: Project Leader
+        start_date: 2022-04
+        end_date: 2022-11
+        summary: Integrated sequential game-theoretic models with prospect theory and contract theory to optimize computational resource allocation in blockchain; conducted literature review of 70+ papers.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
+      - company: China Contemporary Undergraduate Mathematical Contest in Modeling
+        position: Participant
+        start_date: 2017-09
+        end_date: 2017-09
+        summary: Developed joint pricing and allocation model for crowdsourced task platforms; implemented numerical experiments to characterize optimal policies. Award: Provincial First Prize, Jiangsu Province.
 
     Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+      - company: Lumiere Research Inclusion Foundation (Lumiere Education)
+        position: Volunteer Mentor
+        start_date: 2026
+        end_date: 2026
+
+      - company: INFORMS Annual Meeting
+        position: Session Chair
+        start_date: 2025
+        end_date: 2025
+
+      - company: Journal of Systems Science and Mathematical Sciences
+        position: Reviewer
+        start_date: 2023
+        end_date: 2023
+
+      - company: SheShapes Academia / Global Shapers Community Beijing Hub
+        position: Fellow
+        start_date: 2022
+        end_date: 2022
 
     Awards:
-      - title: Nobel Prize in Physics
+      - title: Outstanding Graduate Student Award
+        issuer: Beijing University of Posts and Telecommunications
+        date: 2023
+
+    Working Papers:
+      - title: Profit Meets Purpose: Refurbish-to-Lease Model for Medical Essentials
         authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+          - Zhongxin Hu
+          - Christina Imdahl
+          - Yeqing Zhou
+          - Z"{u}mb"{u}l Atan
+        status: Under Review
+        notes: "Conference presentations: 2026 OPAC Conference (Best Presentation Award); Circularity and Sustainability Workshop (Poster), Utrecht, NL. 2025 INFORMS Annual Meeting, Atlanta, USA; Beta Symposium, Soesterberg, NL."
 
-      - title: Max Planck Medal
+      - title: Strategic Selection of Remanufacturing Business Models: A Consumer Perception Perspective
         authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+          - Zhongxin Hu
+          - Christina Imdahl
+          - Z"{u}mb"{u}l Atan
+        status: Under Second-round Review
+        notes: "Conference presentations: 2026 OPAC Conference, Heeze, NL; 2025 International Symposium on Inventories, Budapest, HU."
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
+    Papers:
+      - title: The Effect of Loss Preference on Queueing with Information Disclosure Policy
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+          - Cao, J.
+          - Guo, Y.
+          - Hu, Z.
+        publisher: Methodology and Computing in Applied Probability
+        volume: 25
+        issue: 75
+        year: 2023
+        doi: 10.1007/s11009-023-10047-w
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
+      - title: Cooperating Strategy of Newsvendor with Advertisers Under Partial Quality Disclosure
         authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+          - Hu, Z.
+          - Guo, Y.
+        publisher: Journal of Systems Science and Mathematical Sciences
+        volume: 43
+        issue: 3
+        pages: "667-682"
+        year: 2023
+        doi: 10.12341/jssms22073
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+    Teaching:
+      - course: Fundamentals of Operations Management (TU/e)
+        level: BSc
+        term: Q3 2024/25 & 2025/26
 
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - course: Probability Theory and Stochastic Processes (BUPT)
+        level: BSc
+        term: Spring 2021
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - course: Advanced Mathematics (BUPT)
+        level: BSc
+        term: Fall 2020
 
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+      - course: Reinforcement Learning: Theory and Applications (BUPT)
+        level: MSc
+        term: Summer 2021
 
     Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+      - name: LINear to CIrcular Transition (LINCIT)
         highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+          - Role: Researcher
+          - Studied operational decisions in circular business models
+        start_date: 2023-07
+        end_date: 2026-06
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: Post-Graduate Innovation and Entrepreneurship Project
+        highlights:
+          - Role: Project Leader
+          - Integrated game-theoretic models with prospect and contract theory for resource allocation in blockchain
+        start_date: 2022-04
+        end_date: 2022-11
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    References: []
