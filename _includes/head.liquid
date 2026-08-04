@@ -1,0 +1,9 @@
+{%- comment -%}
+Local head include override — appends a site-wide brand stylesheet link.
+This is intentionally minimal: it only adds a link to assets/css/brand-overrides.css.
+Because the theme's original head is gem-owned, keeping this file minimal reduces risk.
+If you find runtime assets or meta tags missing, restore the original head include from the gem
+or adapt this file to include the necessary tags.
+{%- endcomment -%}
+
+<link rel="stylesheet" href="{{ '/assets/css/brand-overrides.css' | relative_url }}">
