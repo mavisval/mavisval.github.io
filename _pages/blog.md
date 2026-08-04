@@ -35,8 +35,7 @@ pagination:
     <ul class="p-0 m-0">
       {% for tag in site.display_tags %}
         <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
-        </li>
+          <i class="fa-solid fa-hashtag fa-sm"></i>           <a class="text-brand" href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>        </li>
         {% unless forloop.last %}
           <p>&bull;</p>
         {% endunless %}
@@ -46,8 +45,7 @@ pagination:
       {% endif %}
       {% for category in site.display_categories %}
         <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
-        </li>
+          <i class="fa-solid fa-tag fa-sm"></i>           <a class="text-brand" href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>        </li>
         {% unless forloop.last %}
           <p>&bull;</p>
         {% endunless %}
@@ -66,14 +64,14 @@ pagination:
 {% for post in featured_posts %}
 <div class="col mb-4">
 <a href="{{ post.url | relative_url }}">
-<div class="card hoverable">
+<div class="card hoverable border-brand">
 <div class="row g-0">
 <div class="col-md-12">
 <div class="card-body">
 <div class="float-right">
 <i class="fa-solid fa-thumbtack fa-xs"></i>
 </div>
-<h3 class="card-title text-lowercase">{{ post.title }}</h3>
+<h3 class="card-title text-lowercase text-brand">{{ post.title }}</h3>
 <p class="card-text">{{ post.description }}</p>
 
                     {% if post.external_source == blank %}

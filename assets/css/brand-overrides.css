@@ -1,0 +1,42 @@
+/* Brand overrides — academic green palette
+   This file sets a small set of CSS variables used by the al-folio runtime.
+   Keep this file small and only override tokens that are safe to change locally.
+*/
+:root {
+  /* Primary brand color */
+  --global-theme-color: #1f7a4d; /* deep academic green */
+  --global-theme-600: #1b6a41;
+  --global-theme-700: #145a33;
+
+  /* Text color variants to pair with the brand */
+  --global-theme-text: #0b3e23;
+  --global-theme-on-light: #ffffff;
+}
+
+/* Apply brand color to common UI elements used by the theme */
+a, a:visited { color: var(--global-theme-color); }
+a:hover, a:focus { color: var(--global-theme-700); }
+
+/* Buttons, badges, and primary accents */
+.btn-primary, .badge-primary, .al-btn--primary {
+  background-color: var(--global-theme-color) !important;
+  border-color: var(--global-theme-color) !important;
+  color: var(--global-theme-on-light) !important;
+}
+
+/* Progress bar, links in nav, and other accents */
+.progress-bar, .navbar .nav-link.active, .al-badge {
+  background-color: var(--global-theme-color) !important;
+}
+
+/* For Tailwind mode, provide utility token fallback selectors so compilers pick up color usage
+   (Tailwind runtime comes from the gem; this file only provides runtime CSS variables). */
+.text-brand { color: var(--global-theme-color) !important; }
+.bg-brand { background-color: var(--global-theme-color) !important; }
+.border-brand { border-color: var(--global-theme-color) !important; }
+
+/* Ensure icons (Font Awesome / Academicons) paired with brand look consistent */
+.fa, .ai { color: var(--global-theme-text); }
+
+/* Minor accessible contrast tweak for headings when over brand backgrounds */
+.brand-heading { color: var(--global-theme-on-light); }
