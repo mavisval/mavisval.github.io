@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /interests/
-title: travel photography
+title: beyond research
 nav: true
 nav_order: 7
 ---

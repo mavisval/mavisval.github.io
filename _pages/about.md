@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: about me
 permalink: /
 subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>PhD candidate in Operations Management</a> at Eindhoven University of Technology.
 
