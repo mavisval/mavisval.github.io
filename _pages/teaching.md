@@ -45,17 +45,22 @@ nav_order: 6
     <article>
       <h2>Bachelor End Projects</h2>
       <p>Eindhoven University of Technology</p>
-      <time>2026/27</time>
+      <time>Fall 2026/27</time>
     </article>
     <article>
       <h2>Bachelor End Projects</h2>
       <p>Eindhoven University of Technology</p>
-      <time>2025/26</time>
+      <time>Spring 2025/26</time>
     </article>
     <article>
       <h2>Bachelor End Projects</h2>
       <p>Eindhoven University of Technology</p>
-      <time>2024/25</time>
+      <time>Spring 2024/25</time>
+    </article>
+    <article>
+      <h2>Bachelor End Projects</h2>
+      <p>Eindhoven University of Technology</p>
+      <time>Fall 2024/25</time>
     </article>
   </section>
 </div>
