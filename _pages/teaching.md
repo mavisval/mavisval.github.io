@@ -2,14 +2,23 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Course materials, schedules, and resources for classes taught.
+description: Teaching assistance and undergraduate project supervision.
 nav: true
 nav_order: 6
-calendar: true
 ---
 
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
+## Teaching assistant
 
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
+### BSc courses
 
-{% include courses.liquid %}
+- **Fundamentals of Operations Management**, Eindhoven University of Technology - Q3 2024/25 and 2025/26
+- **Probability Theory and Stochastic Processes**, Beijing University of Posts and Telecommunications - Spring 2021
+- **Advanced Mathematics**, Beijing University of Posts and Telecommunications - Fall 2020
+
+### MSc course
+
+- **Reinforcement Learning: Theory and Applications**, Beijing University of Posts and Telecommunications - Summer 2021
+
+## Supervision
+
+- Supervisor of Bachelor End Projects, Eindhoven University of Technology - 2024/25 to 2026/27

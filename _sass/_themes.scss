@@ -1,11 +1,17 @@
-/* Academic-theme palette overrides */
-$theme-color: #234b4b;
-$theme-color-dark: #143333;
-$theme-color-light: #3f6b67;
-$theme-color-lighter: #dce8e5;
+/* Quiet academic palette with accessible accents in both color schemes. */
+$theme-color: #315d59;
+$theme-color-dark: #244844;
+$theme-color-light: #557d78;
+$theme-color-lighter: #dfe9e7;
 
 :root {
   --global-theme-color: #{$theme-color};
   --global-theme-color-dark: #{$theme-color-dark};
   --global-theme-color-light: #{$theme-color-light};
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #8ebbb4;
+  --global-theme-color-dark: #acd0ca;
+  --global-theme-color-light: #6f9f98;
 }

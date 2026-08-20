@@ -1,12 +1,14 @@
 cv:
   name: Zhongxin Hu
-  label: PhD Candidate
+  label: PhD Candidate in Operations Management
   email: z.hu1@tue.nl
   location: Eindhoven, The Netherlands
   image: ""
-  summary: "Final PhD candidate at Eindhoven University of Technology. My research focuses on sustainable operations management, studying circular business models such as remanufacturing and refurbishment to support economically and environmentally beneficial operational decisions. Broader interests include equilibrium analysis and pricing in queueing systems, behavioral operations, and sequential games."
+  summary: "My research focuses on sustainable operations management. I study circular business models, such as remanufacturing and refurbishment, that enable firms to make decisions that are economically, environmentally, and socially beneficial. My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games."
 
-  social_networks: []
+  social_networks:
+    - network: LinkedIn
+      username: zhongxinhu
 
   address:
     city: Eindhoven
@@ -21,8 +23,8 @@ cv:
         start_date: 2023-07
         end_date: Ongoing
         highlights:
-          - Supervisors: Z"{u}mb"{u}l Atan and Christina Imdahl
-          - Group: Operations, Planning, Accounting & Control (OPAC)
+          - "Supervisors: Zümbül Atan and Christina Imdahl"
+          - "Group: Operations, Planning, Accounting & Control (OPAC)"
 
       - institution: Beijing University of Posts and Telecommunications (BUPT)
         location: Beijing, China
@@ -31,9 +33,9 @@ cv:
         start_date: 2020-09
         end_date: 2023-06
         highlights:
-          - Supervisor: Yongjiang Guo
-          - Honor: Outstanding Graduate Student Award
-          - Thesis: "Information Disclosure and Reference Dependence in the Cooperative Newsvendor Problem"
+          - "Supervisor: Yongjiang Guo"
+          - "Honor: Outstanding Graduate Student Award"
+          - "Thesis: Information Disclosure and Reference Dependence in the Cooperative Newsvendor Problem"
 
       - institution: Nanjing University of Posts and Telecommunications
         location: Nanjing, China
@@ -42,7 +44,7 @@ cv:
         start_date: 2015-09
         end_date: 2019-06
         highlights:
-          - Honor: Merit Undergraduate Student Award
+          - "Honor: Merit Undergraduate Student Award"
 
     Experience:
       - company: LINear to CIrcular Transition (LINCIT)
@@ -61,7 +63,7 @@ cv:
         position: Participant
         start_date: 2017-09
         end_date: 2017-09
-        summary: Developed joint pricing and allocation model for crowdsourced task platforms; implemented numerical experiments to characterize optimal policies. Award: Provincial First Prize, Jiangsu Province.
+        summary: "Developed a joint pricing and allocation model for crowdsourced task platforms and implemented numerical experiments to develop optimal allocation policies. Award: Provincial First Prize, Jiangsu Province."
 
     Volunteer:
       - company: Lumiere Research Inclusion Foundation (Lumiere Education)
@@ -79,7 +81,7 @@ cv:
         start_date: 2023
         end_date: 2023
 
-      - company: SheShapes Academi, Global Shapers Community Beijing Hub
+      - company: SheShapes Academia, Global Shapers Community Beijing Hub
         position: Fellow
         start_date: 2022
         end_date: 2022
@@ -90,20 +92,20 @@ cv:
         date: 2023
 
     Working Papers:
-      - title: Profit Meets Purpose: Refurbish-to-Lease Model for Medical Essentials
+      - title: "Profit Meets Purpose: Refurbish-to-Lease Model for Medical Essentials"
         authors:
           - Zhongxin Hu
           - Christina Imdahl
           - Yeqing Zhou
-          - Z"{u}mb"{u}l Atan
+          - Zümbül Atan
         status: Under Review
         notes: "Conference presentations: 2026 OPAC Conference (Best Presentation Award); Circularity and Sustainability Workshop (Poster), Utrecht, NL. 2025 INFORMS Annual Meeting, Atlanta, USA; Beta Symposium, Soesterberg, NL."
 
-      - title: Strategic Selection of Remanufacturing Business Models: A Consumer Perception Perspective
+      - title: "Strategic Selection of Remanufacturing Business Models: A Consumer Perception Perspective"
         authors:
           - Zhongxin Hu
           - Christina Imdahl
-          - Z"{u}mb"{u}l Atan
+          - Zümbül Atan
         status: Under Second-round Review
         notes: "Conference presentations: 2026 OPAC Conference, Heeze, NL; 2025 International Symposium on Inventories, Budapest, HU."
 
@@ -143,23 +145,32 @@ cv:
         level: BSc
         term: Fall 2020
 
-      - course: Reinforcement Learning: Theory and Applications (BUPT)
+      - course: "Reinforcement Learning: Theory and Applications (BUPT)"
         level: MSc
         term: Summer 2021
+
+    Supervision:
+      - role: Supervisor of Bachelor End Projects
+        institution: Eindhoven University of Technology (TU/e)
+        term: 2024/25 - 2026/27
 
     Projects:
       - name: LINear to CIrcular Transition (LINCIT)
         highlights:
-          - Role: Researcher
+          - "Role: Researcher"
           - Studied operational decisions in circular business models
         start_date: 2023-07
         end_date: 2026-06
 
       - name: Post-Graduate Innovation and Entrepreneurship Project
         highlights:
-          - Role: Project Leader
+          - "Role: Project Leader"
           - Integrated game-theoretic models with prospect and contract theory for resource allocation in blockchain
         start_date: 2022-04
         end_date: 2022-11
 
     References: []
+
+    Personal Interests:
+      - name: Interests
+        details: Flea markets, practical upcycling, off-grid tent camping, and photography.

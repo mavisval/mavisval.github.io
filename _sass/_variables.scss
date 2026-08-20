@@ -1,11 +1,245 @@
-/* Local theme overrides for a darker academic palette */
+/*
+ * Site-level design layer.
+ *
+ * al-folio loads this partial as part of its main stylesheet, which keeps the
+ * custom presentation small and avoids replacing gem-owned layouts or head
+ * markup. The restrained type scale, measure, and borders are intentional:
+ * the content remains the visual focus.
+ */
 :root {
-  --global-theme-color: #234b4b;
-  --global-theme-color-light: #3f6b67;
-  --global-theme-color-dark: #143333;
-  --global-text-color: #1f2d2d;
-  --global-text-color-light: #5d6c6c;
-  --global-bg-color: #f5f7f6;
+  --global-theme-color: #315d59;
+  --global-theme-color-light: #557d78;
+  --global-theme-color-dark: #244844;
+  --global-text-color: #202725;
+  --global-text-color-light: #65706d;
+  --global-bg-color: #fbfcfb;
   --global-card-bg-color: #ffffff;
-  --global-divider-color: #d8e2df;
+  --global-divider-color: #dfe5e3;
+  --academic-serif: Georgia, "Times New Roman", serif;
+  --academic-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --academic-shadow: 0 10px 30px rgb(31 48 44 / 7%);
+}
+
+html[data-theme="dark"] {
+  --global-text-color: #e7ecea;
+  --global-text-color-light: #aeb9b6;
+  --global-bg-color: #151a19;
+  --global-card-bg-color: #1c2221;
+  --global-divider-color: #323b39;
+  --academic-shadow: none;
+}
+
+body {
+  font-family: var(--academic-sans);
+  font-size: 1rem;
+  line-height: 1.72;
+  letter-spacing: -0.005em;
+  text-rendering: optimizeLegibility;
+}
+
+main,
+.post,
+.page-content {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+.post-title,
+.navbar-brand {
+  color: var(--global-text-color);
+  font-family: var(--academic-serif);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+h1,
+.post-title {
+  line-height: 1.15;
+}
+
+h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  font-size: clamp(1.35rem, 3vw, 1.7rem);
+}
+
+h3 {
+  margin-top: 1.75rem;
+  font-size: 1.2rem;
+}
+
+p,
+li {
+  max-width: 72ch;
+}
+
+a {
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.18em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--global-theme-color-dark);
+  text-decoration-thickness: 0.1em;
+}
+
+.container {
+  padding-right: clamp(1.1rem, 4vw, 2rem);
+  padding-left: clamp(1.1rem, 4vw, 2rem);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--global-divider-color);
+  background-color: color-mix(in srgb, var(--global-bg-color) 94%, transparent);
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+}
+
+.navbar .navbar-brand {
+  font-size: 1.2rem;
+}
+
+.navbar .nav-link {
+  position: relative;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--global-text-color);
+}
+
+.navbar .nav-link.active::after {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.45rem;
+  left: 0.5rem;
+  height: 1px;
+  background: var(--global-theme-color);
+  content: "";
+}
+
+.profile {
+  margin: 0 0 2rem 2.5rem;
+}
+
+.profile img {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.2rem;
+  box-shadow: var(--academic-shadow);
+}
+
+.profile .more-info {
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.profile .more-info p {
+  margin-bottom: 0.2rem;
+}
+
+.news table,
+.table {
+  border-color: var(--global-divider-color);
+}
+
+.news table td,
+.news table th,
+.table td,
+.table th {
+  padding: 0.75rem 0.55rem;
+  vertical-align: top;
+}
+
+.bibliography {
+  margin-top: 1.25rem;
+}
+
+.bibliography > li,
+.bibliography ol > li {
+  margin-bottom: 1.1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+  background: var(--global-card-bg-color);
+}
+
+.bibliography .title {
+  margin-bottom: 0.25rem;
+  font-family: var(--academic-serif);
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.bibliography .author,
+.bibliography .periodical {
+  color: var(--global-text-color-light);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.bibliography .links a,
+.btn,
+.badge {
+  border-radius: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.card {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+  box-shadow: none;
+}
+
+footer {
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 0.84rem;
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: 0.97rem;
+    line-height: 1.68;
+  }
+
+  .navbar .nav-link.active::after {
+    display: none;
+  }
+
+  .profile {
+    float: none !important;
+    width: min(68%, 16rem) !important;
+    margin: 0 auto 1.75rem !important;
+  }
+
+  .profile .more-info {
+    text-align: center;
+  }
+
+  .bibliography > li,
+  .bibliography ol > li {
+    padding: 0.85rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

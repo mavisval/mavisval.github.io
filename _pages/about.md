@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>Final-year PhD candidate</a> at Eindhoven University of Technology.
+subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>PhD candidate in Operations Management</a> at Eindhoven University of Technology.
 
 profile:
   align: left
@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
@@ -27,25 +27,12 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<style>
-:root {
- --global-theme-color: #1f7a4d; /* academic green */
- --global-theme-text: #0b3e23;
-}
-/* basic overrides to emphasize the selected color on this page */
-a, a:visited { color: var(--global-theme-color); }
-a:hover { color: #145a33; }
-.btn-primary, .badge-primary { background-color: var(--global-theme-color) !important; border-color: var(--global-theme-color) !important; color: #fff !important; }
-</style>
+I am Zhongxin Hu, a PhD candidate in Operations Management at Eindhoven University of Technology. My research focuses on sustainable operations management. I study circular business models, such as remanufacturing and refurbishment, that enable firms to make decisions that are economically, environmentally, and socially beneficial.
 
-<div class="text-brand mb-3"><strong>Academic profile theme:</strong> green accents are now applied across the site.</div>
-
-I am Zhongxin Hu, a final PhD candidate at Eindhoven University of Technology. My research focuses on sustainable operations management, with an emphasis on circular business models such as remanufacturing and refurbishment that help firms make economically and environmentally beneficial operational decisions. My broader interests include equilibrium analysis and pricing in queueing systems, behavioral operations, and sequential games.
-
-My work sits at the intersection of operations research, economics, and sustainability. I am especially interested in developing decision frameworks that help firms design and implement business models that are both efficient and sustainable over time.
+My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
 
 Atlas 4.419, Eindhoven University of Technology
 
-Edit the `profile` property in this page's YAML header to update or hide contact details and social links. Edit `_bibliography/papers.bib` and Jekyll will render your [papers page](/al-folio/publications/) automatically.
+## Personal interests
 
-This site uses Font Awesome and Academicons for social icons. Add or remove links in the YAML header as needed.
+I am passionate about exploring flea markets and practical upcycling. I also enjoy spending time off-grid with tent camping and photography.
