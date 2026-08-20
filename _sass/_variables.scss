@@ -1,245 +1,52 @@
-/*
- * Site-level design layer.
- *
- * al-folio loads this partial as part of its main stylesheet, which keeps the
- * custom presentation small and avoids replacing gem-owned layouts or head
- * markup. The restrained type scale, measure, and borders are intentional:
- * the content remains the visual focus.
- */
-:root {
-  --global-theme-color: #315d59;
-  --global-theme-color-light: #557d78;
-  --global-theme-color-dark: #244844;
-  --global-text-color: #202725;
-  --global-text-color-light: #65706d;
-  --global-bg-color: #fbfcfb;
-  --global-card-bg-color: #ffffff;
-  --global-divider-color: #dfe5e3;
-  --academic-serif: Georgia, "Times New Roman", serif;
-  --academic-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --academic-shadow: 0 10px 30px rgb(31 48 44 / 7%);
-}
+/*******************************************************************************
+ * Variables used throughout the theme.
+ * To adjust anything, simply edit the variables below and rebuild the theme.
+ ******************************************************************************/
 
-html[data-theme="dark"] {
-  --global-text-color: #e7ecea;
-  --global-text-color-light: #aeb9b6;
-  --global-bg-color: #151a19;
-  --global-card-bg-color: #1c2221;
-  --global-divider-color: #323b39;
-  --academic-shadow: none;
-}
+@use "sass:color";
 
-body {
-  font-family: var(--academic-sans);
-  font-size: 1rem;
-  line-height: 1.72;
-  letter-spacing: -0.005em;
-  text-rendering: optimizeLegibility;
-}
+// Colors
+$red-color: #ff3636 !default;
+$red-color-dark: #b71c1c !default;
+$orange-color: #f29105 !default;
+$blue-color: #0076df !default;
+$blue-color-dark: #00369f !default;
+$cyan-color: #2698ba !default;
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: #00ab37 !default;
+$green-color-lime: #b7d12a !default;
+$green-color-dark: #009f06 !default;
+$green-color-light: #ddffdd !default;
+$green-color-bright: #11d68b !default;
+$purple-color: #b509ac !default;
+$light-purple-color: color.adjust($purple-color, $lightness: 25%);
+$pink-color: #f92080 !default;
+$pink-color-light: #ffdddd !default;
+$yellow-color: #efcc00 !default;
 
-main,
-.post,
-.page-content {
-  min-width: 0;
-}
+$grey-color: #828282 !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: #1c1c1d;
+$grey-900: #212529;
 
-h1,
-h2,
-h3,
-.post-title,
-.navbar-brand {
-  color: var(--global-text-color);
-  font-family: var(--academic-serif);
-  font-weight: 500;
-  letter-spacing: -0.025em;
-}
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
 
-h1,
-.post-title {
-  line-height: 1.15;
-}
+// Theme colors
 
-h2 {
-  margin-top: 2.5rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--global-divider-color);
-  font-size: clamp(1.35rem, 3vw, 1.7rem);
-}
+$code-bg-color-light: rgba($purple-color, 0.05);
+$code-bg-color-dark: #2c3237 !default;
 
-h3 {
-  margin-top: 1.75rem;
-  font-size: 1.2rem;
-}
+// Font awesome location
+$fa-font-path: "../webfonts";
 
-p,
-li {
-  max-width: 72ch;
-}
+// Back To Top button config
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 30px;
+$back-to-top-right: 30px;
+$back-to-top-diameter: 40px;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;
 
-a {
-  text-decoration-thickness: 0.06em;
-  text-underline-offset: 0.18em;
-}
-
-a:hover,
-a:focus-visible {
-  color: var(--global-theme-color-dark);
-  text-decoration-thickness: 0.1em;
-}
-
-.container {
-  padding-right: clamp(1.1rem, 4vw, 2rem);
-  padding-left: clamp(1.1rem, 4vw, 2rem);
-}
-
-.navbar {
-  border-bottom: 1px solid var(--global-divider-color);
-  background-color: color-mix(in srgb, var(--global-bg-color) 94%, transparent);
-  box-shadow: none;
-  backdrop-filter: blur(12px);
-}
-
-.navbar .navbar-brand {
-  font-size: 1.2rem;
-}
-
-.navbar .nav-link {
-  position: relative;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
-  color: var(--global-text-color-light);
-  font-size: 0.92rem;
-  font-weight: 500;
-  letter-spacing: 0.015em;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-  color: var(--global-text-color);
-}
-
-.navbar .nav-link.active::after {
-  position: absolute;
-  right: 0.5rem;
-  bottom: 0.45rem;
-  left: 0.5rem;
-  height: 1px;
-  background: var(--global-theme-color);
-  content: "";
-}
-
-.profile {
-  margin: 0 0 2rem 2.5rem;
-}
-
-.profile img {
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.2rem;
-  box-shadow: var(--academic-shadow);
-}
-
-.profile .more-info {
-  color: var(--global-text-color-light);
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
-
-.profile .more-info p {
-  margin-bottom: 0.2rem;
-}
-
-.news table,
-.table {
-  border-color: var(--global-divider-color);
-}
-
-.news table td,
-.news table th,
-.table td,
-.table th {
-  padding: 0.75rem 0.55rem;
-  vertical-align: top;
-}
-
-.bibliography {
-  margin-top: 1.25rem;
-}
-
-.bibliography > li,
-.bibliography ol > li {
-  margin-bottom: 1.1rem;
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.25rem;
-  background: var(--global-card-bg-color);
-}
-
-.bibliography .title {
-  margin-bottom: 0.25rem;
-  font-family: var(--academic-serif);
-  font-size: 1.06rem;
-  font-weight: 600;
-  line-height: 1.45;
-}
-
-.bibliography .author,
-.bibliography .periodical {
-  color: var(--global-text-color-light);
-  font-size: 0.92rem;
-  line-height: 1.55;
-}
-
-.bibliography .links a,
-.btn,
-.badge {
-  border-radius: 0.2rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.card {
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.25rem;
-  box-shadow: none;
-}
-
-footer {
-  border-top: 1px solid var(--global-divider-color);
-  font-size: 0.84rem;
-}
-
-@media (max-width: 767.98px) {
-  body {
-    font-size: 0.97rem;
-    line-height: 1.68;
-  }
-
-  .navbar .nav-link.active::after {
-    display: none;
-  }
-
-  .profile {
-    float: none !important;
-    width: min(68%, 16rem) !important;
-    margin: 0 auto 1.75rem !important;
-  }
-
-  .profile .more-info {
-    text-align: center;
-  }
-
-  .bibliography > li,
-  .bibliography ol > li {
-    padding: 0.85rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-}
+// Max width default
+$max-content-width: 930px !default;
