@@ -385,9 +385,9 @@ a:focus-visible {
 }
 
 .profile {
-  float: none !important;
+  float: left !important;
   width: min(100%, 18rem) !important;
-  margin: 0 auto 16rem !important;
+  margin: 0 clamp(3rem, 8vw, 6rem) 2rem 0 !important;
 }
 
 .profile img {
@@ -793,7 +793,12 @@ html[data-theme="dark"] .teaching-label {
 .interest-gallery {
   display: grid;
   gap: 3.5rem;
+  width: 100%;
   margin-top: 2.5rem;
+}
+
+.interest-introduction p {
+  max-width: none;
 }
 
 .gallery-collection {
@@ -913,12 +918,15 @@ footer {
   }
 
   .profile {
-    width: min(68%, 16rem) !important;
-    margin-bottom: 4rem !important;
+    float: left !important;
+    width: min(28vw, 7rem) !important;
+    margin: 0 1.25rem 1rem 0 !important;
   }
 
   .profile .more-info {
-    text-align: center;
+    font-size: 0.76rem;
+    line-height: 1.4;
+    text-align: left;
   }
 
   .about-introduction p {
@@ -977,3 +985,4 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
