@@ -446,6 +446,24 @@ a:focus-visible {
     box-shadow 160ms ease;
 }
 
+.publications .bibliography li > .row {
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.publications .bibliography li > .row > [class*="col-sm-"] {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.publications .bibliography .abbr:empty {
+  display: none;
+}
+
 .bibliography > li:hover,
 .bibliography ol > li:hover {
   border-color: color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
