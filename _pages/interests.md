@@ -6,7 +6,9 @@ nav: true
 nav_order: 7
 ---
 
-Beyond research, I enjoy camping and photography. Travelling gives me the opportunity to spend time outdoors, observe unfamiliar places, and capture the landscapes, architecture, and small details that make each journey memorable. Below is a selection of photographs I took during my travels.
+Beyond research, I find joy in photography, camping, and wandering through flea markets.
+
+Travel introduces me to new places, new people, and the cultures that shape their ways of life. Along the way, photography allows me to pause, observe more closely, and preserve moments for years to come. Below is a selection of photographs I have captured on these journeys.
 
 <div class="interest-gallery">
   <section class="gallery-collection">
