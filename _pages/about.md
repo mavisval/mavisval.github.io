@@ -29,8 +29,10 @@ latest_posts:
 
 <div class="about-introduction" markdown="1">
 
-I am Zhongxin Hu, a PhD candidate in Sustainable Operations Management at Eindhoven University of Technology. My research examines how firms can design and operate circular business models, particularly remanufacturing and refurbishment, to create economic, environmental, and social value.
+I am Zhongxin Hu, a PhD candidate in Sustainable Operations Management at Eindhoven University of Technology.
 
-More broadly, I study strategic decision-making in operations, with interests in pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
+My research helps firms design and operate circular business models, such as remanufacturing and refurbishment, to create economic, environmental, and social value.
+
+My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
 
 </div>
