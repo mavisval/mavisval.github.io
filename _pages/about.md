@@ -33,6 +33,4 @@ I am Zhongxin Hu, a PhD candidate in Operations Management at Eindhoven Universi
 
 My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
 
-Atlas 4.419, Eindhoven University of Technology
-
 </div>
