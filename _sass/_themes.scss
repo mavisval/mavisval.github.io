@@ -206,7 +206,7 @@ html[data-theme-setting="light"] {
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
 }
-\n\n/* Site-specific minimal academic design overrides. */\n/*
+/* Site-specific minimal academic design overrides. */\n/*
  * Site-level design layer.
  *
  * al-folio loads this partial as part of its main stylesheet, which keeps the
@@ -218,6 +218,8 @@ html[data-theme-setting="light"] {
   --global-theme-color: #315d59;
   --global-theme-color-light: #557d78;
   --global-theme-color-dark: #244844;
+  --global-hover-color: #315d59;
+  --global-hover-text-color: #ffffff;
   --global-text-color: #202725;
   --global-text-color-light: #65706d;
   --global-bg-color: #fbfcfb;
@@ -229,6 +231,11 @@ html[data-theme-setting="light"] {
 }
 
 html[data-theme="dark"] {
+  --global-theme-color: #8ebbb4;
+  --global-theme-color-light: #6f9f98;
+  --global-theme-color-dark: #acd0ca;
+  --global-hover-color: #8ebbb4;
+  --global-hover-text-color: #151a19;
   --global-text-color: #e7ecea;
   --global-text-color-light: #aeb9b6;
   --global-bg-color: #151a19;
