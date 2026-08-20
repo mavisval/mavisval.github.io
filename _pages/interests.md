@@ -6,9 +6,13 @@ nav: true
 nav_order: 7
 ---
 
+<div class="interest-introduction" markdown="1">
+
 Beyond research, I find joy in photography, camping, and wandering through flea markets.
 
 Travel introduces me to new places, new people, and the cultures that shape their ways of life. Along the way, photography allows me to pause, observe more closely, and preserve moments for years to come. Below is a selection of photographs I have captured on these journeys.
+
+</div>
 
 <div class="interest-gallery">
   <section class="gallery-collection">
@@ -47,3 +51,4 @@ Travel introduces me to new places, new people, and the cultures that shape thei
     </div>
   </section>
 </div>
+
