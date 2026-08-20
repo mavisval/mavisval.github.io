@@ -6,7 +6,7 @@ nav: true
 nav_order: 7
 ---
 
-I photograph the landscapes, architecture, and small details that give each journey its character. This sample gallery shows how future travel collections can be organized by visual theme; the example images can be replaced with my own photographs over time.
+Beyond research, I enjoy camping and photography. Travelling gives me the opportunity to spend time outdoors, observe unfamiliar places, and capture the landscapes, architecture, and small details that make each journey memorable. Below is a selection of photographs I took during my travels.
 
 <div class="interest-gallery">
   <section class="gallery-collection">
