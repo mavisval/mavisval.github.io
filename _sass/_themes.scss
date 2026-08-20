@@ -797,6 +797,11 @@ html[data-theme="dark"] .teaching-label {
   margin-top: 2.5rem;
 }
 
+.container:has(.interest-gallery) {
+  width: 100%;
+  max-width: none;
+}
+
 .interest-introduction p {
   max-width: none;
 }
