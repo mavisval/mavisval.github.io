@@ -542,6 +542,59 @@ a:focus-visible {
   font-weight: 650;
 }
 
+.paper-award {
+  display: inline-block;
+  padding: 0.08rem 0.42rem;
+  border: 1px solid color-mix(in srgb, var(--global-theme-color) 42%, transparent);
+  border-radius: 999px;
+  color: var(--global-theme-color-dark);
+  background: var(--academic-theme-wash);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  white-space: nowrap;
+}
+
+.publications h2.bibliography:first-of-type + ol.bibliography > li {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.publications h2.bibliography:first-of-type + ol.bibliography .title {
+  line-height: 1.3;
+}
+
+.publications h2.bibliography:first-of-type + ol.bibliography .author,
+.publications h2.bibliography:first-of-type + ol.bibliography .periodical,
+.publications h2.bibliography:first-of-type + ol.bibliography .paper-meta {
+  line-height: 1.38;
+}
+
+.publications h2.bibliography:first-of-type + ol.bibliography .paper-meta {
+  gap: 0.55rem;
+  margin-top: 0.55rem;
+}
+
+.publications h2.bibliography:first-of-type + ol.bibliography .paper-presentations ul {
+  gap: 0.18rem;
+}
+
+.publications h2.bibliography:last-of-type + ol.bibliography > li {
+  margin-bottom: 1.35rem;
+  padding-top: 1.35rem;
+  padding-bottom: 1.35rem;
+}
+
+.publications h2.bibliography:last-of-type + ol.bibliography .title {
+  margin-bottom: 0.45rem;
+  line-height: 1.55;
+}
+
+.publications h2.bibliography:last-of-type + ol.bibliography .author,
+.publications h2.bibliography:last-of-type + ol.bibliography .periodical {
+  line-height: 1.78;
+}
+
 html[data-theme="dark"] .paper-status strong,
 html[data-theme="dark"] .paper-presentations > strong {
   color: #aeb8b5;
