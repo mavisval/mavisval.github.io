@@ -385,7 +385,9 @@ a:focus-visible {
 }
 
 .profile {
-  margin: 0 0 2rem 2.5rem;
+  float: none !important;
+  width: min(100%, 18rem) !important;
+  margin: 0 auto 2.5rem !important;
 }
 
 .profile img {
@@ -398,6 +400,7 @@ a:focus-visible {
   color: var(--global-text-color-light);
   font-size: 0.88rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .profile .more-info p {
@@ -405,6 +408,7 @@ a:focus-visible {
 }
 
 .about-introduction p {
+  max-width: none;
   text-align: justify;
   text-align-last: left;
   hyphens: auto;
@@ -429,6 +433,7 @@ a:focus-visible {
 
 .bibliography > li,
 .bibliography ol > li {
+  max-width: none;
   margin-bottom: 1.1rem;
   padding: 1rem 1.1rem;
   border: 1px solid var(--global-divider-color);
@@ -734,22 +739,14 @@ html[data-theme="dark"] .teaching-label {
 }
 
 .social .contact-icons a {
-  display: inline-grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: 0 0.15rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 50%;
-  background: var(--global-card-bg-color);
-  place-items: center;
+  display: inline-block;
+  margin: 0 0.35rem;
   transition:
-    border-color 160ms ease,
     color 160ms ease,
     transform 160ms ease;
 }
 
 .social .contact-icons a:hover {
-  border-color: var(--global-theme-color);
   transform: translateY(-2px);
 }
 
@@ -784,9 +781,8 @@ footer {
   }
 
   .profile {
-    float: none !important;
     width: min(68%, 16rem) !important;
-    margin: 0 auto 1.75rem !important;
+    margin-bottom: 1.75rem !important;
   }
 
   .profile .more-info {
