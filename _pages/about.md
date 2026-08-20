@@ -2,7 +2,7 @@
 layout: about
 title: about me
 permalink: /
-subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>PhD candidate in Operations Management</a> at Eindhoven University of Technology.
+subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>PhD candidate in Sustainable Operations Management</a> at Eindhoven University of Technology.
 
 profile:
   align: left
@@ -11,7 +11,7 @@ profile:
   more_info: >
     <p>PhD candidate</p>
     <p>Eindhoven University of Technology</p>
-    <p>Eindhoven, North Brabant, the Netherlands</p>
+    <p>Eindhoven, the Netherlands</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -29,8 +29,8 @@ latest_posts:
 
 <div class="about-introduction" markdown="1">
 
-I am Zhongxin Hu, a PhD candidate in Operations Management at Eindhoven University of Technology. My research focuses on sustainable operations management. I study circular business models, such as remanufacturing and refurbishment, that enable firms to make decisions that are economically, environmentally, and socially beneficial.
+I am Zhongxin Hu, a PhD candidate in Sustainable Operations Management at Eindhoven University of Technology. My research examines how firms can design and operate circular business models, particularly remanufacturing and refurbishment, to create economic, environmental, and social value.
 
-My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
+More broadly, I study strategic decision-making in operations, with interests in pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
 
 </div>
