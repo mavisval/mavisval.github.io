@@ -2,7 +2,6 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Teaching assistance and undergraduate project supervision.
 nav: true
 nav_order: 6
 ---

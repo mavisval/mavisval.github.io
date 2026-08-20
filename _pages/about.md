@@ -13,7 +13,7 @@ profile:
     <p>Eindhoven University of Technology</p>
     <p>Eindhoven, North Brabant, the Netherlands</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -32,7 +32,3 @@ I am Zhongxin Hu, a PhD candidate in Operations Management at Eindhoven Universi
 My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
 
 Atlas 4.419, Eindhoven University of Technology
-
-## Personal interests
-
-I am passionate about exploring flea markets and practical upcycling. I also enjoy spending time off-grid with tent camping and photography.

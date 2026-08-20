@@ -206,7 +206,9 @@ html[data-theme-setting="light"] {
 #light-toggle:hover .fa-half-sun-moon::after {
   color: var(--global-theme-color);
 }
-\n\n/* Site-specific minimal academic design overrides. */\n/*
+/* Site-specific minimal academic design overrides. */
+
+/*
  * Site-level design layer.
  *
  * al-folio loads this partial as part of its main stylesheet, which keeps the
@@ -218,6 +220,8 @@ html[data-theme-setting="light"] {
   --global-theme-color: #315d59;
   --global-theme-color-light: #557d78;
   --global-theme-color-dark: #244844;
+  --global-hover-color: #315d59;
+  --global-hover-text-color: #ffffff;
   --global-text-color: #202725;
   --global-text-color-light: #65706d;
   --global-bg-color: #fbfcfb;
@@ -229,6 +233,11 @@ html[data-theme-setting="light"] {
 }
 
 html[data-theme="dark"] {
+  --global-theme-color: #8ebbb4;
+  --global-theme-color-light: #6f9f98;
+  --global-theme-color-dark: #acd0ca;
+  --global-hover-color: #8ebbb4;
+  --global-hover-text-color: #151a19;
   --global-text-color: #e7ecea;
   --global-text-color-light: #aeb9b6;
   --global-bg-color: #151a19;
@@ -406,6 +415,121 @@ a:focus-visible {
   letter-spacing: 0.02em;
 }
 
+.publications h2.bibliography {
+  margin: 2.75rem 0 1.25rem;
+  padding: 0.7rem 0 0;
+  border-top: 1px solid var(--global-divider-color);
+  border-bottom: 0;
+  color: #4b5351;
+  font-family: var(--academic-sans);
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+html[data-theme="dark"] .publications h2.bibliography {
+  color: #aeb8b5;
+}
+
+.project-timeline {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.project-period {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.25fr) minmax(0, 1fr);
+  gap: clamp(1.25rem, 4vw, 3.5rem);
+  padding: 1.5rem 0 2.25rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.project-period > h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #4b5351;
+  font-family: var(--academic-sans);
+  font-size: 0.92rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.project-entry {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--global-divider-color);
+}
+
+.project-entry::before {
+  position: absolute;
+  top: 0.45rem;
+  left: -0.28rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--global-theme-color);
+  content: "";
+}
+
+.project-entry h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.22rem;
+}
+
+.project-entry p:last-child {
+  margin-bottom: 0;
+}
+
+.project-role {
+  margin-bottom: 0.35rem;
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+html[data-theme="dark"] .project-period > h2 {
+  color: #aeb8b5;
+}
+
+.cv-pdf-viewer {
+  width: 100%;
+  min-height: 46rem;
+  height: calc(100vh - 10rem);
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+  background: var(--global-card-bg-color);
+}
+
+.cv-pdf-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.interest-gallery {
+  margin-top: 2rem;
+}
+
+.interest-gallery figure {
+  max-width: 38rem;
+  margin: 0;
+}
+
+.interest-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.25rem;
+  box-shadow: var(--academic-shadow);
+}
+
 .card {
   border: 1px solid var(--global-divider-color);
   border-radius: 0.25rem;
@@ -440,6 +564,19 @@ footer {
   .bibliography > li,
   .bibliography ol > li {
     padding: 0.85rem;
+  }
+
+  .project-period {
+    display: block;
+  }
+
+  .project-period > h2 {
+    margin-bottom: 1rem;
+  }
+
+  .cv-pdf-viewer {
+    min-height: 35rem;
+    height: 75vh;
   }
 }
 
