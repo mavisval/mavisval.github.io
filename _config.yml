@@ -7,9 +7,9 @@ first_name: Zhongxin
 middle_name:
 last_name: Hu
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  For research-related inquiries, please contact me by email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Zhongxin Hu is a final-year PhD student at Eindhoven University of Technology researching sustainable operations management, circular business models, and strategic decision-making.
+  Zhongxin Hu is a PhD candidate in Operations Management at Eindhoven University of Technology researching sustainable operations management, circular business models, and strategic decision-making.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -357,8 +357,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Hu]
+  first_name: [Zhongxin, Z.]
 
   style: apa
   locale: en

@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>Final-year PhD candidate</a> at Eindhoven University of Technology.
+subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>PhD candidate in Operations Management</a> at Eindhoven University of Technology.
 
 profile:
   align: left
@@ -27,12 +27,12 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am Zhongxin Hu, a final PhD candidate at Eindhoven University of Technology. My research focuses on sustainable operations management, with an emphasis on circular business models such as remanufacturing and refurbishment that help firms make economically and environmentally beneficial operational decisions. My broader interests include equilibrium analysis and pricing in queueing systems, behavioral operations, and sequential games.
+I am Zhongxin Hu, a PhD candidate in Operations Management at Eindhoven University of Technology. My research focuses on sustainable operations management. I study circular business models, such as remanufacturing and refurbishment, that enable firms to make decisions that are economically, environmentally, and socially beneficial.
 
-My work sits at the intersection of operations research, economics, and sustainability. I am especially interested in developing decision frameworks that help firms design and implement business models that are both efficient and sustainable over time.
+My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
 
 Atlas 4.419, Eindhoven University of Technology
 
-Edit the `profile` property in this page's YAML header to update or hide contact details and social links. Edit `_bibliography/papers.bib` and Jekyll will render your [papers page](/al-folio/publications/) automatically.
+## Personal interests
 
-This site uses Font Awesome and Academicons for social icons. Add or remove links in the YAML header as needed.
+I am passionate about exploring flea markets and practical upcycling. I also enjoy spending time off-grid with tent camping and photography.
