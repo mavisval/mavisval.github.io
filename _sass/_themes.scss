@@ -468,6 +468,67 @@ a:focus-visible {
   line-height: 1.55;
 }
 
+.paper-meta {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  color: var(--global-text-color);
+  font-style: normal;
+}
+
+.paper-status {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.paper-status strong,
+.paper-presentations > strong {
+  color: #303735;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paper-status span {
+  color: var(--global-text-color-light);
+}
+
+.paper-presentations ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.paper-presentations li {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  gap: 0.6rem;
+  max-width: none;
+  padding-left: 1rem;
+  color: var(--global-text-color-light);
+}
+
+.paper-presentations li::before {
+  position: absolute;
+  margin-left: -1rem;
+  color: var(--global-theme-color);
+  content: "•";
+}
+
+.presentation-year {
+  color: var(--global-text-color);
+  font-weight: 650;
+}
+
+html[data-theme="dark"] .paper-status strong,
+html[data-theme="dark"] .paper-presentations > strong {
+  color: #aeb8b5;
+}
+
 .bibliography .links a,
 .btn,
 .badge {
