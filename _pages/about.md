@@ -27,19 +27,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<style>
-:root {
- --global-theme-color: #1f7a4d; /* academic green */
- --global-theme-text: #0b3e23;
-}
-/* basic overrides to emphasize the selected color on this page */
-a, a:visited { color: var(--global-theme-color); }
-a:hover { color: #145a33; }
-.btn-primary, .badge-primary { background-color: var(--global-theme-color) !important; border-color: var(--global-theme-color) !important; color: #fff !important; }
-</style>
-
-<div class="text-brand mb-3"><strong>Academic profile theme:</strong> green accents are now applied across the site.</div>
-
 I am Zhongxin Hu, a final PhD candidate at Eindhoven University of Technology. My research focuses on sustainable operations management, with an emphasis on circular business models such as remanufacturing and refurbishment that help firms make economically and environmentally beneficial operational decisions. My broader interests include equilibrium analysis and pricing in queueing systems, behavioral operations, and sequential games.
 
 My work sits at the intersection of operations research, economics, and sustainability. I am especially interested in developing decision frameworks that help firms design and implement business models that are both efficient and sustainable over time.

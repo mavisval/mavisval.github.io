@@ -4,7 +4,7 @@
 
 title: Zhongxin Hu # the website title (if blank, full name will be used instead)
 first_name: Zhongxin
-middle_name: 
+middle_name:
 last_name: Hu
 contact_note: >
   You can even add a little note about which of these is the best way to reach you.
@@ -96,14 +96,14 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 960px
 
 # -----------------------------------------------------------------------------
 # Open Graph & Schema.org
