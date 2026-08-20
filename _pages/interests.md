@@ -6,7 +6,9 @@ nav: true
 nav_order: 7
 ---
 
-Beyond research, I enjoy photography, camping, and exploring flea markets. Travelling allows me to experience unfamiliar places and the cultures rooted in them, while capturing the landscapes and small details that make each journey memorable. Below is a selection of photographs I took along the way.
+Beyond research, I enjoy photography, camping, and exploring flea markets.
+
+Travelling allows me to experience unfamiliar places and the cultures that shape them. Photography encourages me to look more closely and preserve the moments that catch my eye. Below is a selection of photographs I took along the way, capturing landscapes and small details from my travels.
 
 <div class="interest-gallery">
   <section class="gallery-collection">
