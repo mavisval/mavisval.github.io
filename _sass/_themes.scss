@@ -227,6 +227,8 @@ html[data-theme-setting="light"] {
   --global-bg-color: #fbfcfb;
   --global-card-bg-color: #ffffff;
   --global-divider-color: #dfe5e3;
+  --academic-surface-soft: #f3f7f5;
+  --academic-theme-wash: rgb(49 93 89 / 8%);
   --academic-serif: Georgia, "Times New Roman", serif;
   --academic-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --academic-shadow: 0 10px 30px rgb(31 48 44 / 7%);
@@ -243,10 +245,13 @@ html[data-theme="dark"] {
   --global-bg-color: #151a19;
   --global-card-bg-color: #1c2221;
   --global-divider-color: #323b39;
+  --academic-surface-soft: #1a201f;
+  --academic-theme-wash: rgb(142 187 180 / 10%);
   --academic-shadow: none;
 }
 
 body {
+  background: radial-gradient(circle at 85% 8%, var(--academic-theme-wash), transparent 24rem), var(--global-bg-color);
   font-family: var(--academic-sans);
   font-size: 1rem;
   line-height: 1.72;
@@ -274,6 +279,33 @@ h3,
 h1,
 .post-title {
   line-height: 1.15;
+}
+
+.post-header {
+  margin-bottom: clamp(2rem, 5vw, 3.25rem);
+}
+
+.post-title {
+  position: relative;
+  padding-top: 1rem;
+  font-size: clamp(2.15rem, 7vw, 3.6rem);
+}
+
+.post-title::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.75rem;
+  height: 0.18rem;
+  border-radius: 999px;
+  background: var(--global-theme-color);
+  content: "";
+}
+
+.post-description {
+  max-width: 58ch;
+  color: var(--global-text-color-light);
+  font-size: 1.02rem;
 }
 
 h2 {
@@ -328,11 +360,18 @@ a:focus-visible {
   font-size: 0.92rem;
   font-weight: 500;
   letter-spacing: 0.015em;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: var(--global-text-color);
+}
+
+.navbar .nav-link:hover {
+  background: var(--academic-theme-wash);
 }
 
 .navbar .nav-link.active::after {
@@ -351,7 +390,7 @@ a:focus-visible {
 
 .profile img {
   border: 1px solid var(--global-divider-color);
-  border-radius: 0.2rem;
+  border-radius: 0.75rem;
   box-shadow: var(--academic-shadow);
 }
 
@@ -389,6 +428,18 @@ a:focus-visible {
   border: 1px solid var(--global-divider-color);
   border-radius: 0.25rem;
   background: var(--global-card-bg-color);
+  box-shadow: 0 1px 0 rgb(31 48 44 / 3%);
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.bibliography > li:hover,
+.bibliography ol > li:hover {
+  border-color: color-mix(in srgb, var(--global-theme-color) 42%, var(--global-divider-color));
+  box-shadow: var(--academic-shadow);
+  transform: translateY(-2px);
 }
 
 .bibliography .title {
@@ -463,6 +514,14 @@ html[data-theme="dark"] .publications h2.bibliography {
   border-left: 1px solid var(--global-divider-color);
 }
 
+.project-entry h3 {
+  transition: color 160ms ease;
+}
+
+.project-period:hover .project-entry h3 {
+  color: var(--global-theme-color-dark);
+}
+
 .project-entry::before {
   position: absolute;
   top: 0.45rem;
@@ -526,8 +585,35 @@ html[data-theme="dark"] .project-period > h2 {
   width: 100%;
   height: auto;
   border: 1px solid var(--global-divider-color);
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   box-shadow: var(--academic-shadow);
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.social .contact-icons a {
+  display: inline-grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 0.15rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 50%;
+  background: var(--global-card-bg-color);
+  place-items: center;
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.social .contact-icons a:hover {
+  border-color: var(--global-theme-color);
+  transform: translateY(-2px);
 }
 
 .card {
@@ -538,6 +624,7 @@ html[data-theme="dark"] .project-period > h2 {
 
 footer {
   border-top: 1px solid var(--global-divider-color);
+  background: color-mix(in srgb, var(--academic-surface-soft) 78%, transparent);
   font-size: 0.84rem;
 }
 
@@ -549,6 +636,14 @@ footer {
 
   .navbar .nav-link.active::after {
     display: none;
+  }
+
+  .navbar .nav-link:hover {
+    background: transparent;
+  }
+
+  .post-title {
+    font-size: clamp(2rem, 12vw, 2.75rem);
   }
 
   .profile {
