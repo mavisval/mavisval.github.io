@@ -797,24 +797,6 @@ html[data-theme="dark"] .teaching-label {
   margin-top: 2.5rem;
 }
 
-.container:has(.interest-gallery) {
-  width: 100%;
-  max-width: none;
-}
-
-.interest-introduction {
-  display: grid;
-  grid-template-columns: minmax(14rem, 0.7fr) minmax(0, 1.3fr);
-  gap: clamp(2rem, 6vw, 6rem);
-  align-items: start;
-  width: 100%;
-}
-
-.interest-introduction p {
-  max-width: none;
-  margin: 0;
-}
-
 .gallery-collection {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -849,10 +831,42 @@ html[data-theme="dark"] .teaching-label {
 }
 
 .gallery-grid figure {
+  position: relative;
   margin: 0;
   overflow: hidden;
   border-radius: 0.55rem;
   background: var(--academic-surface-soft);
+}
+
+.gallery-grid figure::before,
+.gallery-grid figure::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(-32deg);
+}
+
+.gallery-grid figure::before {
+  width: min(72%, 28rem);
+  height: 1px;
+  background: rgb(255 255 255 / 42%);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 18%);
+  content: "";
+}
+
+.gallery-grid figure::after {
+  padding: 0.18rem 0.5rem;
+  color: rgb(255 255 255 / 72%);
+  background: rgb(20 28 26 / 24%);
+  font-size: clamp(0.62rem, 1.2vw, 0.78rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 45%);
+  text-transform: uppercase;
+  white-space: nowrap;
+  content: "•  Zhongxin Hu";
 }
 
 .gallery-grid .gallery-wide {
@@ -945,11 +959,6 @@ footer {
 
   .about-introduction p {
     text-align: left;
-  }
-
-  .interest-introduction {
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
 
   .bibliography > li,
