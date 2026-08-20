@@ -2,7 +2,6 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research and modeling projects in circular operations, blockchain resource allocation, and platform design.
 nav: true
 nav_order: 3
 ---

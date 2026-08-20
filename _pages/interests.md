@@ -1,15 +1,47 @@
 ---
 layout: page
 permalink: /interests/
-title: personal interests
+title: travel photography
 nav: true
 nav_order: 7
 ---
 
-I am passionate about exploring flea markets and practical upcycling. I also enjoy spending time off-grid with tent camping and photography.
+I photograph the landscapes, architecture, and small details that give each journey its character. This sample gallery shows how future travel collections can be organized by visual theme; the example images can be replaced with my own photographs over time.
 
 <div class="interest-gallery">
-  <figure>
-    <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="Photograph of Zhongxin Hu" loading="lazy">
-  </figure>
+  <section class="gallery-collection">
+    <div class="gallery-heading">
+      <p>Collection 01</p>
+      <h2>Landscapes</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-wide">
+        <img src="{{ '/assets/img/5.jpg' | relative_url }}" alt="Mountain lake and canoe" loading="lazy">
+      </figure>
+      <figure>
+        <img src="{{ '/assets/img/4.jpg' | relative_url }}" alt="Rocky coast at sunset" loading="lazy">
+      </figure>
+      <figure>
+        <img src="{{ '/assets/img/7.jpg' | relative_url }}" alt="Mountain silhouettes after sunset" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <section class="gallery-collection">
+    <div class="gallery-heading">
+      <p>Collection 02</p>
+      <h2>Places & details</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure>
+        <img src="{{ '/assets/img/10.jpg' | relative_url }}" alt="Historic city architecture" loading="lazy">
+      </figure>
+      <figure>
+        <img src="{{ '/assets/img/8.jpg' | relative_url }}" alt="Green door and window" loading="lazy">
+      </figure>
+      <figure class="gallery-wide">
+        <img src="{{ '/assets/img/6.jpg' | relative_url }}" alt="Hot-air balloons above a valley" loading="lazy">
+      </figure>
+    </div>
+  </section>
 </div>
