@@ -2,7 +2,7 @@
 layout: about
 title: about me
 permalink: /
-subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>PhD candidate in Sustainable Operations Management</a> at Eindhoven University of Technology.
+subtitle: <a href='https://research.tue.nl/en/persons/zhongxin-hu/'>PhD candidate at Eindhoven University of Technology</a>.
 
 profile:
   align: left
