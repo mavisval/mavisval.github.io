@@ -1,12 +1,11 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: /assets/pdf/Hu_Zhongxin_CV.pdf
-cv_format: rendercv # options: rendercv, jsonresume
-description: Education, research, publications, projects, teaching, and professional activities.
-toc:
-  sidebar: left
 ---
+
+<div class="cv-pdf-viewer">
+  <iframe src="{{ '/assets/pdf/Hu_Zhongxin_CV.pdf' | relative_url }}#view=FitH" title="Zhongxin Hu CV"></iframe>
+</div>
