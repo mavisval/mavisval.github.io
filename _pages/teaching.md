@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
+title: Teaching
 nav: true
 nav_order: 6
 ---
@@ -48,18 +48,18 @@ nav_order: 6
       <time>Fall 2026/27</time>
     </article>
     <article>
-      <h2>Bachelor End Projects</h2>
-      <p>Eindhoven University of Technology</p>
+      <h2>Condition-Based Maintenance Policy for Bearings: Minimizing Total Expected Cost Rate</h2>
+      <p>Bachelor End Project · Eindhoven University of Technology</p>
       <time>Spring 2025/26</time>
     </article>
     <article>
-      <h2>Bachelor End Projects</h2>
-      <p>Eindhoven University of Technology</p>
+      <h2>Expanding Manual Labor Modeling in a Front-End Semiconductor Fab: A Case Study at NXP Semiconductors</h2>
+      <p>Bachelor End Project · Eindhoven University of Technology</p>
       <time>Spring 2024/25</time>
     </article>
     <article>
-      <h2>Bachelor End Projects</h2>
-      <p>Eindhoven University of Technology</p>
+      <h2>Optimizing the Pay-Per-Use Price and Time of Remanufacturing for Leasing Advanced Medical Devices to Hospitals in Underdeveloped Countries</h2>
+      <p>Bachelor End Project · Eindhoven University of Technology</p>
       <time>Fall 2024/25</time>
     </article>
   </section>
