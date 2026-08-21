@@ -845,32 +845,36 @@ html[data-theme="dark"] .teaching-label {
 .gallery-grid figure::before,
 .gallery-grid figure::after {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  right: clamp(-0.75rem, 0vw, 0rem);
+  bottom: clamp(1.75rem, 5vw, 3rem);
   z-index: 1;
   pointer-events: none;
-  transform: translate(-50%, -50%) rotate(-32deg);
+  transform: rotate(-32deg);
+  transform-origin: right center;
 }
 
 .gallery-grid figure::before {
-  width: min(72%, 28rem);
+  width: clamp(10rem, 42%, 20rem);
   height: 1px;
-  background: rgb(255 255 255 / 42%);
-  box-shadow: 0 1px 1px rgb(0 0 0 / 18%);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 38%) 28%, rgb(255 255 255 / 48%));
+  box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
   content: "";
 }
 
 .gallery-grid figure::after {
-  padding: 0.18rem 0.5rem;
-  color: rgb(255 255 255 / 72%);
-  background: rgb(20 28 26 / 24%);
-  font-size: clamp(0.62rem, 1.2vw, 0.78rem);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 45%);
-  text-transform: uppercase;
+  right: clamp(1.25rem, 4vw, 3rem);
+  padding: 0.2rem 0.55rem;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 999px;
+  color: rgb(255 255 255 / 68%);
+  background: rgb(16 24 22 / 18%);
+  font-size: clamp(0.6rem, 1vw, 0.74rem);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 38%);
   white-space: nowrap;
-  content: "•  Zhongxin Hu";
+  backdrop-filter: blur(3px);
+  content: "●  Zhongxin Hu";
 }
 
 .gallery-grid .gallery-wide {
