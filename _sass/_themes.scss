@@ -797,6 +797,10 @@ html[data-theme="dark"] .teaching-label {
   margin-top: 2.5rem;
 }
 
+.interest-introduction p {
+  max-width: none;
+}
+
 .gallery-collection {
   border-top: 1px solid var(--global-divider-color);
 }
