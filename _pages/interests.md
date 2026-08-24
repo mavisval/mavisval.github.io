@@ -33,18 +33,15 @@ Travel introduces me to new places, new people, and the cultures that shape thei
   <section class="gallery-collection">
     <div class="gallery-heading">
       <p>Collection 02</p>
-      <h2>Places & details</h2>
+      <h2>Morocco</h2>
     </div>
+    {% assign morocco_photos = "dscf7969.jpg,dscf7152.jpg,dscf7549.jpg,dscf8001.jpg,dscf8015.jpg,dscf8031.jpg,dscf7742.jpg,dscf7811.jpg,dscf7822.jpg,dscf7555.jpg,dscf7093.jpg,dscf7040.jpg,dscf7337.jpg,dscf7382.jpg,dscf7525.jpg,dscf7010.jpg,dscf7042.jpg,dscf7329.jpg,dscf7388.jpg,dscf7522.jpg,dscf7013.jpg,dscf7656.jpg,dscf7663.jpg,dscf7664.jpg,dscf7676.jpg,dscf8017.jpg,chefchaouen-clock.jpg,chefchaouen-alley.jpg,chefchaouen-blue-street.jpg,chefchaouen-courtyard.jpg" | split: "," %}
     <div class="gallery-grid">
+      {% for photo in morocco_photos %}
       <figure>
-        <img src="{{ '/assets/img/10.jpg' | relative_url }}" alt="Historic city architecture" loading="lazy">
+        <img src="{{ '/assets/img/morocco/' | append: photo | relative_url }}" alt="Morocco landscape, architecture, and travel photograph" loading="lazy">
       </figure>
-      <figure>
-        <img src="{{ '/assets/img/8.jpg' | relative_url }}" alt="Green door and window" loading="lazy">
-      </figure>
-      <figure class="gallery-wide">
-        <img src="{{ '/assets/img/6.jpg' | relative_url }}" alt="Hot-air balloons above a valley" loading="lazy">
-      </figure>
+      {% endfor %}
     </div>
   </section>
 </div>
