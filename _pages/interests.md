@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /interests/
-title: beyond research
+title: Beyond Research
 nav: true
 nav_order: 7
 ---
@@ -51,4 +51,3 @@ Travel introduces me to new places, new people, and the cultures that shape thei
     </div>
   </section>
 </div>
-
