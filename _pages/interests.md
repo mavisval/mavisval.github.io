@@ -44,4 +44,34 @@ Travel introduces me to new places, new people, and the cultures that shape thei
       {% endfor %}
     </div>
   </section>
+
+  <section class="gallery-collection">
+    <div class="gallery-heading">
+      <p>Collection 03</p>
+      <h2>Dolomites</h2>
+    </div>
+    {% assign dolomites_photos = "dolomites-01.jpg,dolomites-02.jpg,dolomites-03.jpg,dolomites-04.jpg,dolomites-05.jpg,dolomites-06.jpg,dolomites-07.jpg,dolomites-08.jpg,dolomites-09.jpg,dolomites-10.jpg" | split: "," %}
+    <div class="gallery-grid">
+      {% for photo in dolomites_photos %}
+      <figure>
+        <img src="{{ '/assets/img/dolomites/' | append: photo | relative_url }}" alt="Dolomites mountain and travel photograph" loading="lazy">
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="gallery-collection">
+    <div class="gallery-heading">
+      <p>Collection 04</p>
+      <h2>Others</h2>
+    </div>
+    {% assign others_photos = "others-01.jpg,others-02.jpg,others-03.jpg,others-04.jpg,others-05.jpg" | split: "," %}
+    <div class="gallery-grid">
+      {% for photo in others_photos %}
+      <figure>
+        <img src="{{ '/assets/img/others/' | append: photo | relative_url }}" alt="Travel and photography collection" loading="lazy">
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
 </div>
