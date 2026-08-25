@@ -8,36 +8,50 @@ nav_order: 7
 
 Outside research, I enjoy photography. Use the arrows, keyboard, or swipe to browse each collection.
 
-{% assign collection_data = "Iceland|iceland|dscf1415.jpg,dscf1706.jpg,dscf1694.jpg,dscf1693.jpg,dscf1692.jpg,dscf1660.jpg,dscf1655.jpg,dscf1646.jpg,dscf1631.jpg,dscf1567.jpg,dscf1350.jpg,dscf1344.jpg,dscf1290.jpg,dscf1285.jpg,dscf1246.jpg,dscf1752.jpg,dscf1725.jpg,dscf1721.jpg,dscf1657.jpg,dscf1613.jpg,dscf1612.jpg,dscf1611.jpg,dscf1606.jpg,dscf1594.jpg,dscf1590.jpg,dscf1554.jpg,dscf1543.jpg,dscf1533.jpg,dscf1496.jpg,dscf1504.jpg,dscf1452.jpg,dscf1370.jpg,dscf1359.jpg,dscf1338.jpg,dscf1321.jpg,dscf1301.jpg,dscf1274.jpg,dscf1270.jpg,dscf1201.jpg,dscf1188.jpg,dscf1198.jpg,dscf1654.jpg,dscf1624.jpg,dscf1620.jpg,dscf1609.jpg,dscf1448.jpg,dscf1440.jpg,dscf1347.jpg,dscf1336.jpg,dscf1317.jpg,dscf1242.jpg,dscf1228.jpg,dscf1125.jpg,dscf1069.jpg,dscf1071.jpg,dscf1473.jpg,dscf1307.jpg,dscf1090.jpg,dscf1060.jpg;Morocco|morocco|dscf7969.jpg,dscf7152.jpg,dscf7549.jpg,dscf8001.jpg,dscf8015.jpg,dscf8031.jpg,dscf7742.jpg,dscf7811.jpg,dscf7822.jpg,dscf7555.jpg,dscf7093.jpg,dscf7040.jpg,dscf7337.jpg,dscf7382.jpg,dscf7525.jpg,dscf7010.jpg,dscf7042.jpg,dscf7329.jpg,dscf7388.jpg,dscf7522.jpg,dscf7013.jpg,dscf7656.jpg,dscf7663.jpg,dscf7664.jpg,dscf7676.jpg,dscf8017.jpg,chefchaouen-clock.jpg,chefchaouen-alley.jpg,chefchaouen-blue-street.jpg,chefchaouen-courtyard.jpg;Dolomites|dolomites|dolomites-01.jpg,dolomites-02.jpg,dolomites-03.jpg,dolomites-04.jpg,dolomites-05.jpg,dolomites-06.jpg,dolomites-07.jpg,dolomites-08.jpg,dolomites-09.jpg,dolomites-10.jpg;Others|others|others-01.jpg,others-02.jpg,others-03.jpg,others-04.jpg,others-05.jpg" | split: ";" %}
+{% assign photo_collections = site.pages | where: "photo_collection", true | sort: "collection_order" %}
+{% assign photo_files = site.static_files | sort: "path" %}
+{% assign photo_extensions = ".jpg,.jpeg,.png,.webp,.gif,.avif" | split: "," %}
 
 <div class="photo-collections">
-  {% for collection in collection_data %}
-    {% assign fields = collection | split: "|" %}
-    {% assign photos = fields[2] | split: "," %}
-    <section class="photo-collection" data-stacked-carousel tabindex="0" aria-label="{{ fields[0] }} photo collection">
+  {% for collection in photo_collections %}
+    {% assign photo_count = 0 %}
+    {% for photo in photo_files %}
+      {% assign photo_extension = photo.extname | downcase %}
+      {% if photo.path contains collection.dir and photo_extensions contains photo_extension %}
+        {% assign photo_count = photo_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+    {% if photo_count > 0 %}
+    <section class="photo-collection" data-stacked-carousel tabindex="0" aria-label="{{ collection.collection_name }} photo collection">
       <header class="photo-collection__header">
         <div>
-          <span class="photo-collection__eyebrow">Collection {{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
-          <h2>{{ fields[0] }}</h2>
+          <span class="photo-collection__eyebrow">Collection {{ collection.collection_order | prepend: "0" | slice: -2, 2 }}</span>
+          <h2>{{ collection.collection_name }}</h2>
         </div>
-        <span class="photo-collection__counter" aria-live="polite">1 / {{ photos.size }}</span>
+        <span class="photo-collection__counter" aria-live="polite">1 / {{ photo_count }}</span>
       </header>
 
       <div class="stacked-carousel__stage">
-        {% for photo in photos %}
-          {% capture image_path %}/assets/img/{{ fields[1] }}/{{ photo }}{% endcapture %}
-          <figure class="stacked-carousel__slide" data-slide-index="{{ forloop.index0 }}">
-            <img src="{{ image_path | relative_url }}" alt="{{ fields[0] }} photograph {{ forloop.index }}" loading="lazy" decoding="async">
-          </figure>
+        {% assign photo_number = 0 %}
+        {% for photo in photo_files %}
+          {% assign photo_extension = photo.extname | downcase %}
+          {% if photo.path contains collection.dir and photo_extensions contains photo_extension %}
+            <figure class="stacked-carousel__slide" data-slide-index="{{ photo_number }}">
+              <img src="{{ photo.path | relative_url }}" alt="{{ collection.collection_name }} photograph {{ photo_number | plus: 1 }}" loading="lazy" decoding="async">
+            </figure>
+            {% assign photo_number = photo_number | plus: 1 %}
+          {% endif %}
         {% endfor %}
       </div>
 
       <div class="stacked-carousel__controls">
-        <button type="button" data-carousel-prev aria-label="Previous {{ fields[0] }} photograph">←</button>
-        <button type="button" data-carousel-next aria-label="Next {{ fields[0] }} photograph">→</button>
+        <button type="button" data-carousel-prev aria-label="Previous {{ collection.collection_name }} photograph">←</button>
+        <button type="button" data-carousel-next aria-label="Next {{ collection.collection_name }} photograph">→</button>
       </div>
     </section>
-  {% endfor %}
+    {% endif %}
+
+{% endfor %}
 </div>
 
 <style>
