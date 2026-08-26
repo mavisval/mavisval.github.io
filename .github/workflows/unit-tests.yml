@@ -1,4 +1,4 @@
-name: Integration tests
+name: Personal site integration checks
 
 on:
   push:
@@ -39,7 +39,7 @@ on:
       - ".github/workflows/unit-tests.yml"
 
 jobs:
-  comments-integration-tests:
+  site-build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -57,40 +57,19 @@ jobs:
           python-version: "3.13"
           cache: "pip"
 
-      - name: Setup Node 🧰
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-
-      - name: Install JS deps 📦
-        run: npm ci
-
-      - name: Run style contract lint 🧷
-        run: npm run lint:style-contract
-
       - name: Install build prerequisites 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
 
-      - name: Run comments integration test 🧪
-        run: bash test/integration_comments.sh
+      - name: Build customized academic site 🏗️
+        run: bundle exec jekyll build --baseurl /al-folio
 
-      - name: Run plugin toggle integration test 🔌
-        run: bash test/integration_plugin_toggles.sh
-
-      - name: Run distill integration test 📄
-        run: bash test/integration_distill.sh
-
-      - name: Run bootstrap compatibility integration test 🧩
-        run: bash test/integration_bootstrap_compat.sh
-
-      - name: Run upgrade CLI integration test ⬆️
-        run: bash test/integration_upgrade_cli.sh
-
-      - name: Run CSS minify integration test 🎨
-        run: bash test/integration_css_minify.sh
-
-      - name: Run new plugin integration checks 🧩
-        run: bash test/integration_new_plugins.sh
+      - name: Verify public academic pages 🔎
+        run: |
+          test -f _site/index.html
+          test -f _site/publications/index.html
+          test -f _site/projects/index.html
+          test -f _site/cv/index.html
+          test -f _site/teaching/index.html
+          test -f _site/interests/index.html

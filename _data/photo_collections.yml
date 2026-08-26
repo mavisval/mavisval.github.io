@@ -1,0 +1,15 @@
+- collection_name: Iceland
+  collection_order: 1
+  dir: /assets/img/collections/iceland/
+
+- collection_name: Morocco
+  collection_order: 2
+  dir: /assets/img/collections/morocco/
+
+- collection_name: Dolomites
+  collection_order: 3
+  dir: /assets/img/collections/dolomites/
+
+- collection_name: Others
+  collection_order: 4
+  dir: /assets/img/collections/others/
