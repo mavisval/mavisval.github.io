@@ -8,11 +8,19 @@ nav_order: 7
 
 Outside research, I enjoy photography. Use the arrows, keyboard, or swipe to browse each collection.
 
-{% assign photo_collections = site.data.photo_collections | sort: "collection_order" %}
+{% assign photo_collections = site.pages | where: "photo_collection", true | sort: "collection_order" %}
+{% assign photo_files = site.static_files | sort: "path" %}
+{% assign photo_extensions = ".jpg,.jpeg,.png,.webp,.gif,.avif" | split: "," %}
 
 <div class="photo-collections">
   {% for collection in photo_collections %}
-    {% assign photo_count = collection.photos | size %}
+    {% assign photo_count = 0 %}
+    {% for photo in photo_files %}
+      {% assign photo_extension = photo.extname | downcase %}
+      {% if photo.path contains collection.dir and photo_extensions contains photo_extension %}
+        {% assign photo_count = photo_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
     {% if photo_count > 0 %}
     <section class="photo-collection" data-stacked-carousel tabindex="0" aria-label="{{ collection.collection_name }} photo collection">
       <header class="photo-collection__header">
@@ -24,10 +32,15 @@ Outside research, I enjoy photography. Use the arrows, keyboard, or swipe to bro
       </header>
 
       <div class="stacked-carousel__stage">
-        {% for photo in collection.photos %}
-          <figure class="stacked-carousel__slide" data-slide-index="{{ forloop.index0 }}">
-            <img src="{{ '/assets/img/' | append: photo.file | relative_url }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
-          </figure>
+        {% assign photo_number = 0 %}
+        {% for photo in photo_files %}
+          {% assign photo_extension = photo.extname | downcase %}
+          {% if photo.path contains collection.dir and photo_extensions contains photo_extension %}
+            <figure class="stacked-carousel__slide" data-slide-index="{{ photo_number }}">
+              <img src="{{ photo.path | relative_url }}" alt="{{ collection.collection_name }} photograph {{ photo_number | plus: 1 }}" loading="lazy" decoding="async">
+            </figure>
+            {% assign photo_number = photo_number | plus: 1 %}
+          {% endif %}
         {% endfor %}
       </div>
 
