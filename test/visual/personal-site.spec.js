@@ -21,20 +21,23 @@ for (const [route, heading] of academicPages) {
   });
 }
 
-test("Beyond Research galleries render uploaded collections and advance", async ({ page }) => {
+test("Beyond Research renders four asymmetric contact sheets with watermarks", async ({ page }) => {
   await page.goto("/interests/", { waitUntil: "domcontentloaded" });
 
-  const collections = page.locator("[data-stacked-carousel]");
+  const collections = page.locator(".photo-collection");
   await expect(collections).toHaveCount(4);
 
   const firstCollection = collections.first();
-  const counter = firstCollection.locator(".photo-collection__counter");
-  await expect(counter).toContainText("1 /");
-  await expect(firstCollection.locator('[data-position="0"] img')).toBeVisible();
+  await expect(firstCollection.locator(".photo-collection__counter")).toContainText("photographs");
 
-  await firstCollection.locator("[data-carousel-next]").click();
-  await expect(counter).toContainText("2 /");
+  const photographs = firstCollection.locator(".photo-contact-sheet__item img");
+  expect(await photographs.count()).toBeGreaterThan(0);
+  await expect(photographs.first()).toBeVisible();
+  await expect(firstCollection.locator(".photo-contact-sheet__item--featured").first()).toBeVisible();
 
-  const watermark = await firstCollection.locator('[data-position="0"]').evaluate((slide) => getComputedStyle(slide, "::after").content);
+  const watermark = await firstCollection
+    .locator(".photo-contact-sheet__item")
+    .first()
+    .evaluate((photo) => getComputedStyle(photo, "::after").content);
   expect(watermark).toContain("Zhongxin Hu");
 });
