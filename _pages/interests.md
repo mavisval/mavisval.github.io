@@ -6,7 +6,7 @@ nav: true
 nav_order: 7
 ---
 
-Outside research, I enjoy photography. Use the arrows, keyboard, or swipe to browse each collection.
+Outside research, I enjoy photography. These collections gather landscapes and small details from my travels.
 
 {% assign photo_collections = site.pages | where: "photo_collection", true | sort: "collection_order" %}
 {% assign photo_files = site.static_files | sort: "path" %}
@@ -55,30 +55,23 @@ Outside research, I enjoy photography. Use the arrows, keyboard, or swipe to bro
 </div>
 
 <style>
-  .photo-collections { display: grid; gap: 5rem; margin-top: 2.5rem; }
-  .photo-collection { outline: none; }
+  .photo-collections { display: grid; gap: 4.5rem; margin-top: 3rem; }
+  .photo-collection { border-top: 1px solid var(--global-divider-color); outline: none; padding-top: 0.85rem; }
   .photo-collection:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 0.75rem; }
   .photo-collection__header { align-items: end; display: flex; justify-content: space-between; margin-bottom: 1rem; }
-  .photo-collection__header h2 { margin: 0.15rem 0 0; }
+  .photo-collection__header h2 { border: 0; margin: 0.15rem 0 0; padding: 0; }
   .photo-collection__eyebrow, .photo-collection__counter { color: var(--global-text-color-light); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
-  .stacked-carousel__stage { height: clamp(20rem, 58vw, 42rem); overflow: hidden; perspective: 1200px; position: relative; }
-  .stacked-carousel__slide { height: 88%; left: 11%; margin: 0; opacity: 0; pointer-events: none; position: absolute; top: 4%; transform: translateX(0) scale(0.74); transition: opacity 360ms ease, transform 420ms cubic-bezier(.2,.7,.2,1); width: 78%; z-index: 0; }
-  .stacked-carousel__slide::before, .stacked-carousel__slide::after { bottom: 13%; pointer-events: none; position: absolute; right: 5%; transform: rotate(-32deg); transform-origin: right center; z-index: 2; }
-  .stacked-carousel__slide::before { background: linear-gradient(90deg, transparent, rgb(255 255 255 / 38%) 28%, rgb(255 255 255 / 48%)); content: ""; height: 1px; width: clamp(10rem, 42%, 20rem); }
-  .stacked-carousel__slide::after { backdrop-filter: blur(3px); background: rgb(16 24 22 / 18%); border: 1px solid rgb(255 255 255 / 14%); border-radius: 999px; color: rgb(255 255 255 / 68%); content: "●  Zhongxin Hu"; font-size: clamp(0.6rem, 1vw, 0.74rem); font-weight: 500; letter-spacing: 0.1em; padding: 0.2rem 0.55rem; right: 9%; text-shadow: 0 1px 2px rgb(0 0 0 / 38%); white-space: nowrap; }
-  .stacked-carousel__slide img { background: #111; border-radius: 0.6rem; box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 28%); height: 100%; object-fit: contain; width: 100%; }
-  .stacked-carousel__slide[data-position="0"] { opacity: 1; pointer-events: auto; transform: translateX(0) scale(1); z-index: 5; }
-  .stacked-carousel__slide[data-position="-1"] { opacity: 0.64; transform: translateX(-18%) scale(0.88) rotateY(7deg); z-index: 4; }
-  .stacked-carousel__slide[data-position="1"] { opacity: 0.64; transform: translateX(18%) scale(0.88) rotateY(-7deg); z-index: 4; }
-  .stacked-carousel__slide[data-position="-2"] { opacity: 0.28; transform: translateX(-31%) scale(0.77) rotateY(10deg); z-index: 3; }
-  .stacked-carousel__slide[data-position="2"] { opacity: 0.28; transform: translateX(31%) scale(0.77) rotateY(-10deg); z-index: 3; }
-  .stacked-carousel__controls { display: flex; gap: 0.6rem; justify-content: center; margin-top: 0.8rem; }
-  .stacked-carousel__controls button { align-items: center; background: var(--global-bg-color); border: 1px solid var(--global-divider-color); border-radius: 50%; color: var(--global-text-color); display: inline-flex; font-size: 1.25rem; height: 2.8rem; justify-content: center; transition: background 160ms ease, color 160ms ease; width: 2.8rem; }
-  .stacked-carousel__controls button:hover { background: var(--global-theme-color); color: #fff; }
+  .stacked-carousel__stage { height: clamp(22rem, 62vw, 44rem); overflow: hidden; position: relative; }
+  .stacked-carousel__slide { height: 100%; inset: 0; margin: 0; opacity: 0; pointer-events: none; position: absolute; transition: opacity 240ms ease; width: 100%; }
+  .stacked-carousel__slide::after { bottom: 0.8rem; color: rgb(255 255 255 / 72%); content: "Zhongxin Hu"; font-size: 0.68rem; letter-spacing: 0.08em; pointer-events: none; position: absolute; right: 0.9rem; text-shadow: 0 1px 3px rgb(0 0 0 / 55%); text-transform: uppercase; z-index: 2; }
+  .stacked-carousel__slide img { background: #111; border-radius: 0; box-shadow: none; height: 100%; object-fit: contain; width: 100%; }
+  .stacked-carousel__slide[data-position="0"] { opacity: 1; pointer-events: auto; z-index: 2; }
+  .stacked-carousel__controls { display: flex; gap: 1.25rem; justify-content: flex-end; margin-top: 0.8rem; }
+  .stacked-carousel__controls button { background: transparent; border: 0; border-bottom: 1px solid var(--global-divider-color); border-radius: 0; color: var(--global-text-color); font-size: 1rem; padding: 0.25rem 0.1rem; }
+  .stacked-carousel__controls button:hover { border-color: var(--global-theme-color); color: var(--global-theme-color-dark); }
   @media (max-width: 600px) {
     .photo-collections { gap: 3.5rem; }
-    .stacked-carousel__stage { height: 65vw; min-height: 16rem; }
-    .stacked-carousel__slide { height: 92%; left: 5%; width: 90%; }
+    .stacked-carousel__stage { height: 68vw; min-height: 16rem; }
   }
   @media (prefers-reduced-motion: reduce) { .stacked-carousel__slide { transition: none; } }
 </style>
