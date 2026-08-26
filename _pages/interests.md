@@ -8,19 +8,11 @@ nav_order: 7
 
 Outside research, I enjoy photography. Use the arrows, keyboard, or swipe to browse each collection.
 
-{% assign photo_collections = site.pages | where: "photo_collection", true | sort: "collection_order" %}
-{% assign photo_files = site.static_files | sort: "path" %}
-{% assign photo_extensions = ".jpg,.jpeg,.png,.webp,.gif,.avif" | split: "," %}
+{% assign photo_collections = site.data.photo_collections | sort: "collection_order" %}
 
 <div class="photo-collections">
   {% for collection in photo_collections %}
-    {% assign photo_count = 0 %}
-    {% for photo in photo_files %}
-      {% assign photo_extension = photo.extname | downcase %}
-      {% if photo.path contains collection.dir and photo_extensions contains photo_extension %}
-        {% assign photo_count = photo_count | plus: 1 %}
-      {% endif %}
-    {% endfor %}
+    {% assign photo_count = collection.photos | size %}
     {% if photo_count > 0 %}
     <section class="photo-collection" data-stacked-carousel tabindex="0" aria-label="{{ collection.collection_name }} photo collection">
       <header class="photo-collection__header">
@@ -32,15 +24,10 @@ Outside research, I enjoy photography. Use the arrows, keyboard, or swipe to bro
       </header>
 
       <div class="stacked-carousel__stage">
-        {% assign photo_number = 0 %}
-        {% for photo in photo_files %}
-          {% assign photo_extension = photo.extname | downcase %}
-          {% if photo.path contains collection.dir and photo_extensions contains photo_extension %}
-            <figure class="stacked-carousel__slide" data-slide-index="{{ photo_number }}">
-              <img src="{{ photo.path | relative_url }}" alt="{{ collection.collection_name }} photograph {{ photo_number | plus: 1 }}" loading="lazy" decoding="async">
-            </figure>
-            {% assign photo_number = photo_number | plus: 1 %}
-          {% endif %}
+        {% for photo in collection.photos %}
+          <figure class="stacked-carousel__slide" data-slide-index="{{ forloop.index0 }}">
+            <img src="{{ '/assets/img/' | append: photo.file | relative_url }}" alt="{{ photo.alt }}" loading="lazy" decoding="async">
+          </figure>
         {% endfor %}
       </div>
 
@@ -63,6 +50,9 @@ Outside research, I enjoy photography. Use the arrows, keyboard, or swipe to bro
   .photo-collection__eyebrow, .photo-collection__counter { color: var(--global-text-color-light); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
   .stacked-carousel__stage { height: clamp(20rem, 58vw, 42rem); overflow: hidden; perspective: 1200px; position: relative; }
   .stacked-carousel__slide { height: 88%; left: 11%; margin: 0; opacity: 0; pointer-events: none; position: absolute; top: 4%; transform: translateX(0) scale(0.74); transition: opacity 360ms ease, transform 420ms cubic-bezier(.2,.7,.2,1); width: 78%; z-index: 0; }
+  .stacked-carousel__slide::before, .stacked-carousel__slide::after { bottom: 13%; pointer-events: none; position: absolute; right: 5%; transform: rotate(-32deg); transform-origin: right center; z-index: 2; }
+  .stacked-carousel__slide::before { background: linear-gradient(90deg, transparent, rgb(255 255 255 / 38%) 28%, rgb(255 255 255 / 48%)); content: ""; height: 1px; width: clamp(10rem, 42%, 20rem); }
+  .stacked-carousel__slide::after { backdrop-filter: blur(3px); background: rgb(16 24 22 / 18%); border: 1px solid rgb(255 255 255 / 14%); border-radius: 999px; color: rgb(255 255 255 / 68%); content: "●  Zhongxin Hu"; font-size: clamp(0.6rem, 1vw, 0.74rem); font-weight: 500; letter-spacing: 0.1em; padding: 0.2rem 0.55rem; right: 9%; text-shadow: 0 1px 2px rgb(0 0 0 / 38%); white-space: nowrap; }
   .stacked-carousel__slide img { background: #111; border-radius: 0.6rem; box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 28%); height: 100%; object-fit: contain; width: 100%; }
   .stacked-carousel__slide[data-position="0"] { opacity: 1; pointer-events: auto; transform: translateX(0) scale(1); z-index: 5; }
   .stacked-carousel__slide[data-position="-1"] { opacity: 0.64; transform: translateX(-18%) scale(0.88) rotateY(7deg); z-index: 4; }
