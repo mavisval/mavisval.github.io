@@ -8,7 +8,7 @@ nav_order: 7
 
 Outside research, I enjoy photography. These collections gather landscapes and small details from my travels.
 
-{% assign photo_collections = site.pages | where: "photo_collection", true | sort: "collection_order" %}
+{% assign photo_collections = site.data.photo_collections | sort: "collection_order" %}
 {% assign photo_files = site.static_files | sort: "path" %}
 {% assign photo_extensions = ".jpg,.jpeg,.png,.webp,.gif,.avif" | split: "," %}
 
