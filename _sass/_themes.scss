@@ -253,8 +253,8 @@ html[data-theme="dark"] {
 body {
   background: var(--global-bg-color);
   font-family: var(--academic-sans);
-  font-size: 1rem;
-  line-height: 1.72;
+  font-size: 1.05rem;
+  line-height: 1.76;
   letter-spacing: -0.005em;
   text-rendering: optimizeLegibility;
 }
@@ -405,6 +405,27 @@ a:focus-visible {
 
 .profile .more-info p {
   margin-bottom: 0.2rem;
+}
+
+.about-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.about-links a {
+  color: var(--global-theme-color-dark);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-links a::after {
+  margin-left: 0.28rem;
+  content: "↗";
 }
 
 .about-introduction p {
@@ -639,7 +660,7 @@ html[data-theme="dark"] .publications h2.bibliography {
 
 .project-period {
   display: grid;
-  grid-template-columns: minmax(7rem, 0.25fr) minmax(0, 1fr);
+  grid-template-columns: 8rem minmax(0, 1fr);
   gap: clamp(1.25rem, 4vw, 3.5rem);
   padding: 1.5rem 0 2.25rem;
   border-top: 1px solid var(--global-divider-color);
@@ -726,15 +747,13 @@ html[data-theme="dark"] .project-period > h2 {
 }
 
 .teaching-group {
-  display: grid;
-  grid-template-columns: minmax(9rem, 0.32fr) minmax(0, 1fr);
-  column-gap: clamp(1.5rem, 5vw, 4rem);
+  display: block;
   padding: 1.4rem 0;
   border-top: 1px solid var(--global-divider-color);
 }
 
 .teaching-label {
-  margin: 0;
+  margin: 0 0 1.25rem;
   color: #303735;
   font-size: 0.78rem;
   font-weight: 700;
@@ -744,9 +763,8 @@ html[data-theme="dark"] .project-period > h2 {
 
 .teaching-group article {
   display: grid;
-  grid-column: 2;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 0.15rem 1.5rem;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 0.15rem clamp(1.25rem, 4vw, 3rem);
   padding: 0 0 1.1rem;
 }
 
@@ -756,7 +774,7 @@ html[data-theme="dark"] .project-period > h2 {
 }
 
 .teaching-group h2 {
-  grid-column: 1;
+  grid-column: 2;
   margin: 0;
   padding: 0;
   border: 0;
@@ -764,7 +782,7 @@ html[data-theme="dark"] .project-period > h2 {
 }
 
 .teaching-group article p {
-  grid-column: 1;
+  grid-column: 2;
   margin: 0;
   color: var(--global-text-color-light);
   font-size: 0.9rem;
@@ -772,7 +790,7 @@ html[data-theme="dark"] .project-period > h2 {
 
 .teaching-group time {
   grid-row: 1 / span 2;
-  grid-column: 2;
+  grid-column: 1;
   color: var(--global-text-color-light);
   font-size: 0.84rem;
   white-space: nowrap;
@@ -928,8 +946,8 @@ footer {
 
 @media (max-width: 767.98px) {
   body {
-    font-size: 0.97rem;
-    line-height: 1.68;
+    font-size: 1rem;
+    line-height: 1.72;
   }
 
   .navbar .nav-link.active::after {
@@ -982,12 +1000,19 @@ footer {
   }
 
   .teaching-group article {
-    display: block;
+    grid-template-columns: 1fr;
   }
 
   .teaching-group time {
     display: block;
+    grid-row: auto;
+    grid-column: 1;
     margin-top: 0.35rem;
+  }
+
+  .teaching-group h2,
+  .teaching-group article p {
+    grid-column: 1;
   }
 
   .gallery-grid {
