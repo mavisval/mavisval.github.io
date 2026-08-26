@@ -14,7 +14,7 @@ profile:
     <p>Eindhoven, the Netherlands</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false
 ---
 
 <div class="about-introduction" markdown="1">
@@ -26,3 +26,9 @@ My research helps firms design and operate circular business models, such as rem
 My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
 
 </div>
+
+<nav class="about-links" aria-label="Contact and profile links">
+  <a href="{{ '/assets/pdf/Hu_Zhongxin_CV.pdf' | relative_url }}">CV</a>
+  <a href="mailto:z.hu1@tue.nl">Email</a>
+  <a href="https://www.linkedin.com/in/zhongxinhu">LinkedIn</a>
+</nav>
