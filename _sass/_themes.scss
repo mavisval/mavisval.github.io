@@ -217,10 +217,10 @@ html[data-theme-setting="light"] {
  * the content remains the visual focus.
  */
 :root {
-  --global-theme-color: #315d59;
-  --global-theme-color-light: #557d78;
-  --global-theme-color-dark: #244844;
-  --global-hover-color: #315d59;
+  --global-theme-color: #79a98e;
+  --global-theme-color-light: #a8cbb7;
+  --global-theme-color-dark: #4f7e66;
+  --global-hover-color: #65977b;
   --global-hover-text-color: #ffffff;
   --global-text-color: #202725;
   --global-text-color-light: #65706d;
@@ -228,17 +228,17 @@ html[data-theme-setting="light"] {
   --global-card-bg-color: #ffffff;
   --global-divider-color: #dfe5e3;
   --academic-surface-soft: #f3f7f5;
-  --academic-theme-wash: rgb(49 93 89 / 8%);
+  --academic-theme-wash: rgb(121 169 142 / 11%);
   --academic-serif: Georgia, "Times New Roman", serif;
   --academic-sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --academic-shadow: none;
 }
 
 html[data-theme="dark"] {
-  --global-theme-color: #8ebbb4;
-  --global-theme-color-light: #6f9f98;
-  --global-theme-color-dark: #acd0ca;
-  --global-hover-color: #8ebbb4;
+  --global-theme-color: #a5cfb7;
+  --global-theme-color-light: #7eaa91;
+  --global-theme-color-dark: #c1e1ce;
+  --global-hover-color: #a5cfb7;
   --global-hover-text-color: #151a19;
   --global-text-color: #e7ecea;
   --global-text-color-light: #aeb9b6;
@@ -246,7 +246,7 @@ html[data-theme="dark"] {
   --global-card-bg-color: #1c2221;
   --global-divider-color: #323b39;
   --academic-surface-soft: #1a201f;
-  --academic-theme-wash: rgb(142 187 180 / 10%);
+  --academic-theme-wash: rgb(165 207 183 / 11%);
   --academic-shadow: none;
 }
 
