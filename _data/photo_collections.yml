@@ -1,0 +1,19 @@
+- collection_name: Landscapes
+  collection_order: 1
+  photos:
+    - file: 5.jpg
+      alt: Mountain lake and canoe
+    - file: 4.jpg
+      alt: Rocky coast at sunset
+    - file: 7.jpg
+      alt: Mountain silhouettes after sunset
+
+- collection_name: Places & Details
+  collection_order: 2
+  photos:
+    - file: 10.jpg
+      alt: Historic city architecture
+    - file: 8.jpg
+      alt: Green door and window
+    - file: 6.jpg
+      alt: Hot-air balloons above a valley
