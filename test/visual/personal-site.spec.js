@@ -1,12 +1,12 @@
 const { expect, test } = require("@playwright/test");
 
 const academicPages = [
-  ["/", "Zhongxin Hu"],
-  ["/publications/", "Papers"],
-  ["/projects/", "Projects"],
-  ["/cv/", "CV"],
-  ["/teaching/", "Teaching"],
-  ["/interests/", "Beyond Research"],
+  ["./", "Zhongxin Hu"],
+  ["publications/", "Papers"],
+  ["projects/", "Projects"],
+  ["cv/", "CV"],
+  ["teaching/", "Teaching"],
+  ["interests/", "Beyond Research"],
 ];
 
 for (const [route, heading] of academicPages) {
@@ -22,7 +22,7 @@ for (const [route, heading] of academicPages) {
 }
 
 test("Beyond Research renders four asymmetric contact sheets with watermarks", async ({ page }) => {
-  await page.goto("/interests/", { waitUntil: "domcontentloaded" });
+  await page.goto("interests/", { waitUntil: "domcontentloaded" });
 
   const collections = page.locator(".photo-collection");
   await expect(collections).toHaveCount(4);
