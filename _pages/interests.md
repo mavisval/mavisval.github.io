@@ -6,9 +6,11 @@ nav: true
 nav_order: 7
 ---
 
-Beyond research, I find joy in photography, camping, and wandering through flea markets.
+<div class="beyond-research-introduction">
+  <p>Beyond research, I find joy in photography, camping, and wandering through flea markets.</p>
 
-Travel introduces me to new places, new people, and the cultures that shape their ways of life. Along the way, photography allows me to pause, observe more closely, and preserve moments for years to come. Below is a selection of photographs I have captured on these journeys.
+  <p>Travel introduces me to new places, new people, and the cultures that shape their ways of life. Along the way, photography allows me to pause, observe more closely, and preserve moments for years to come. Below is a selection of photographs I have captured on these journeys.</p>
+</div>
 
 {% assign photo_collections = site.data.photo_collections | sort: "collection_order" %}
 {% assign photo_files = site.static_files | sort: "path" %}
@@ -57,6 +59,7 @@ Travel introduces me to new places, new people, and the cultures that shape thei
 </div>
 
 <style>
+  .beyond-research-introduction, .beyond-research-introduction p { max-width: none; width: 100%; }
   .photo-collections { display: grid; gap: 4.5rem; margin-top: 3rem; }
   .photo-collection { border-top: 1px solid var(--global-divider-color); outline: none; padding-top: 0.85rem; }
   .photo-collection:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 0.6rem; }
@@ -68,8 +71,8 @@ Travel introduces me to new places, new people, and the cultures that shape thei
   .stacked-carousel__slide::after { bottom: 0.75rem; color: rgb(255 255 255 / 72%); content: "Zhongxin Hu"; font-size: 0.66rem; letter-spacing: 0.08em; pointer-events: none; position: absolute; right: 0.8rem; text-shadow: 0 1px 3px rgb(0 0 0 / 55%); text-transform: uppercase; z-index: 2; }
   .stacked-carousel__slide img { border: 1px solid rgb(255 255 255 / 24%); border-radius: 0.35rem; box-shadow: 0 1rem 2.4rem rgb(20 38 29 / 20%); display: block; height: auto; width: 100%; }
   .stacked-carousel__slide[data-position="0"] { opacity: 1; pointer-events: auto; transform: translateY(-50%) scale(1); z-index: 5; }
-  .stacked-carousel__stage[data-active-orientation="portrait"] { aspect-ratio: auto; height: min(74vh, 44rem); }
-  .stacked-carousel__slide[data-position="0"][data-orientation="portrait"] { height: min(68vh, 40rem); left: 50%; transform: translate(-50%, -50%); width: fit-content; }
+  .stacked-carousel__stage[data-active-orientation="portrait"] { aspect-ratio: auto; height: min(82vh, 50rem); }
+  .stacked-carousel__slide[data-position="0"][data-orientation="portrait"] { height: min(76vh, 46rem); left: 50%; transform: translate(-50%, -50%); width: fit-content; }
   .stacked-carousel__slide[data-position="0"][data-orientation="portrait"] img { height: 100%; max-width: 78vw; width: auto; }
   .stacked-carousel__slide[data-position="-1"] { opacity: 0.58; transform: translate(-19%, -50%) scale(0.88) rotateY(5deg); z-index: 4; }
   .stacked-carousel__slide[data-position="1"] { opacity: 0.58; transform: translate(19%, -50%) scale(0.88) rotateY(-5deg); z-index: 4; }
@@ -82,8 +85,8 @@ Travel introduces me to new places, new people, and the cultures that shape thei
     .photo-collections { gap: 3.5rem; }
     .stacked-carousel__stage { touch-action: pan-y; }
     .stacked-carousel__slide { left: 5%; width: 90%; }
-    .stacked-carousel__stage[data-active-orientation="portrait"] { height: min(68vh, 36rem); }
-    .stacked-carousel__slide[data-position="0"][data-orientation="portrait"] { height: min(62vh, 32rem); max-width: 86%; }
+    .stacked-carousel__stage[data-active-orientation="portrait"] { height: min(76vh, 40rem); }
+    .stacked-carousel__slide[data-position="0"][data-orientation="portrait"] { height: min(70vh, 36rem); max-width: 90%; }
     .stacked-carousel__slide[data-position="0"][data-orientation="portrait"] img { max-width: 86vw; }
     .stacked-carousel__controls { inset-inline: calc(5% + 0.45rem); }
     .stacked-carousel__controls button { height: 2.35rem; width: 2.35rem; }
