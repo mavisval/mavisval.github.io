@@ -42,11 +42,11 @@ Outside research, I enjoy photography. These collections gather landscapes and s
             {% assign photo_number = photo_number | plus: 1 %}
           {% endif %}
         {% endfor %}
-      </div>
 
-      <div class="stacked-carousel__controls">
-        <button type="button" data-carousel-prev aria-label="Previous {{ collection.collection_name }} photograph">←</button>
-        <button type="button" data-carousel-next aria-label="Next {{ collection.collection_name }} photograph">→</button>
+        <div class="stacked-carousel__controls">
+          <button type="button" data-carousel-prev aria-label="Previous {{ collection.collection_name }} photograph">←</button>
+          <button type="button" data-carousel-next aria-label="Next {{ collection.collection_name }} photograph">→</button>
+        </div>
       </div>
     </section>
     {% endif %}
@@ -61,22 +61,24 @@ Outside research, I enjoy photography. These collections gather landscapes and s
   .photo-collection__header { align-items: end; display: flex; justify-content: space-between; margin-bottom: 1rem; }
   .photo-collection__header h2 { border: 0; margin: 0.15rem 0 0; padding: 0; }
   .photo-collection__eyebrow, .photo-collection__counter { color: var(--global-text-color-light); font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
-  .stacked-carousel__stage { height: clamp(22rem, 59vw, 43rem); overflow: hidden; perspective: 1200px; position: relative; }
-  .stacked-carousel__slide { height: 88%; left: 11%; margin: 0; opacity: 0; pointer-events: none; position: absolute; top: 5%; transform: translateX(0) scale(0.78); transition: opacity 300ms ease, transform 380ms cubic-bezier(.2,.7,.2,1); width: 78%; z-index: 0; }
+  .stacked-carousel__stage { aspect-ratio: var(--active-photo-ratio, 3 / 2); overflow: hidden; perspective: 1200px; position: relative; transition: aspect-ratio 300ms ease; }
+  .stacked-carousel__slide { left: 11%; margin: 0; opacity: 0; pointer-events: none; position: absolute; top: 50%; transform: translateY(-50%) scale(0.78); transition: opacity 300ms ease, transform 380ms cubic-bezier(.2,.7,.2,1); width: 78%; z-index: 0; }
   .stacked-carousel__slide::after { bottom: 0.75rem; color: rgb(255 255 255 / 72%); content: "Zhongxin Hu"; font-size: 0.66rem; letter-spacing: 0.08em; pointer-events: none; position: absolute; right: 0.8rem; text-shadow: 0 1px 3px rgb(0 0 0 / 55%); text-transform: uppercase; z-index: 2; }
-  .stacked-carousel__slide img { background: #111; border: 1px solid rgb(255 255 255 / 24%); border-radius: 0.35rem; box-shadow: 0 1rem 2.4rem rgb(20 38 29 / 20%); height: 100%; object-fit: contain; width: 100%; }
-  .stacked-carousel__slide[data-position="0"] { opacity: 1; pointer-events: auto; transform: translateX(0) scale(1); z-index: 5; }
-  .stacked-carousel__slide[data-position="-1"] { opacity: 0.58; transform: translateX(-19%) scale(0.88) rotateY(5deg); z-index: 4; }
-  .stacked-carousel__slide[data-position="1"] { opacity: 0.58; transform: translateX(19%) scale(0.88) rotateY(-5deg); z-index: 4; }
-  .stacked-carousel__slide[data-position="-2"] { opacity: 0.24; transform: translateX(-31%) scale(0.78) rotateY(8deg); z-index: 3; }
-  .stacked-carousel__slide[data-position="2"] { opacity: 0.24; transform: translateX(31%) scale(0.78) rotateY(-8deg); z-index: 3; }
-  .stacked-carousel__controls { display: flex; gap: 1rem; justify-content: center; margin-top: 0.5rem; }
-  .stacked-carousel__controls button { background: transparent; border: 0; border-bottom: 1px solid var(--global-divider-color); border-radius: 0; color: var(--global-text-color); font-size: 1rem; padding: 0.25rem 0.15rem; }
-  .stacked-carousel__controls button:hover { border-color: var(--global-theme-color); color: var(--global-theme-color-dark); }
+  .stacked-carousel__slide img { border: 1px solid rgb(255 255 255 / 24%); border-radius: 0.35rem; box-shadow: 0 1rem 2.4rem rgb(20 38 29 / 20%); display: block; height: auto; width: 100%; }
+  .stacked-carousel__slide[data-position="0"] { opacity: 1; pointer-events: auto; transform: translateY(-50%) scale(1); z-index: 5; }
+  .stacked-carousel__slide[data-position="-1"] { opacity: 0.58; transform: translate(-19%, -50%) scale(0.88) rotateY(5deg); z-index: 4; }
+  .stacked-carousel__slide[data-position="1"] { opacity: 0.58; transform: translate(19%, -50%) scale(0.88) rotateY(-5deg); z-index: 4; }
+  .stacked-carousel__slide[data-position="-2"] { opacity: 0.24; transform: translate(-31%, -50%) scale(0.78) rotateY(8deg); z-index: 3; }
+  .stacked-carousel__slide[data-position="2"] { opacity: 0.24; transform: translate(31%, -50%) scale(0.78) rotateY(-8deg); z-index: 3; }
+  .stacked-carousel__controls { display: flex; inset: 50% calc(11% + 0.55rem) auto; justify-content: space-between; pointer-events: none; position: absolute; transform: translateY(-50%); z-index: 8; }
+  .stacked-carousel__controls button { align-items: center; backdrop-filter: blur(5px); background: rgb(247 250 247 / 78%); border: 1px solid rgb(79 126 102 / 32%); border-radius: 50%; box-shadow: 0 0.3rem 1rem rgb(20 38 29 / 16%); color: var(--global-theme-color-dark); display: inline-flex; font-size: 1.15rem; height: 2.6rem; justify-content: center; padding: 0; pointer-events: auto; width: 2.6rem; }
+  .stacked-carousel__controls button:hover { background: rgb(247 250 247 / 94%); border-color: var(--global-theme-color); color: var(--global-theme-color-dark); }
   @media (max-width: 600px) {
     .photo-collections { gap: 3.5rem; }
-    .stacked-carousel__stage { height: 72vw; min-height: 17rem; }
-    .stacked-carousel__slide { height: 91%; left: 5%; width: 90%; }
+    .stacked-carousel__stage { touch-action: pan-y; }
+    .stacked-carousel__slide { left: 5%; width: 90%; }
+    .stacked-carousel__controls { inset-inline: calc(5% + 0.45rem); }
+    .stacked-carousel__controls button { height: 2.35rem; width: 2.35rem; }
   }
   @media (prefers-reduced-motion: reduce) { .stacked-carousel__slide { transition: none; } }
 </style>
@@ -86,8 +88,16 @@ Outside research, I enjoy photography. These collections gather landscapes and s
     document.querySelectorAll('[data-stacked-carousel]').forEach((carousel) => {
       const slides = [...carousel.querySelectorAll('[data-slide-index]')];
       const counter = carousel.querySelector('.photo-collection__counter');
+      const stage = carousel.querySelector('.stacked-carousel__stage');
       let active = 0;
-      let touchStart = null;
+      let pointerStart = null;
+
+      const updateRatio = () => {
+        const image = slides[active].querySelector('img');
+        if (image.naturalWidth && image.naturalHeight) {
+          stage.style.setProperty('--active-photo-ratio', `${image.naturalWidth} / ${image.naturalHeight}`);
+        }
+      };
 
       const render = () => {
         slides.forEach((slide, index) => {
@@ -98,6 +108,9 @@ Outside research, I enjoy photography. These collections gather landscapes and s
           slide.setAttribute('aria-hidden', offset === 0 ? 'false' : 'true');
         });
         counter.textContent = `${active + 1} / ${slides.length}`;
+        const activeImage = slides[active].querySelector('img');
+        if (activeImage.complete) updateRatio();
+        else activeImage.addEventListener('load', updateRatio, { once: true });
       };
 
       const move = (step) => { active = (active + step + slides.length) % slides.length; render(); };
@@ -109,13 +122,14 @@ Outside research, I enjoy photography. These collections gather landscapes and s
         if (event.key === 'Home') { active = 0; render(); }
         if (event.key === 'End') { active = slides.length - 1; render(); }
       });
-      carousel.addEventListener('touchstart', (event) => { touchStart = event.changedTouches[0].clientX; }, { passive: true });
-      carousel.addEventListener('touchend', (event) => {
-        if (touchStart === null) return;
-        const distance = event.changedTouches[0].clientX - touchStart;
+      stage.addEventListener('pointerdown', (event) => { pointerStart = event.clientX; });
+      stage.addEventListener('pointerup', (event) => {
+        if (pointerStart === null) return;
+        const distance = event.clientX - pointerStart;
         if (Math.abs(distance) > 45) move(distance > 0 ? -1 : 1);
-        touchStart = null;
-      }, { passive: true });
+        pointerStart = null;
+      });
+      stage.addEventListener('pointercancel', () => { pointerStart = null; });
       render();
     });
   })();

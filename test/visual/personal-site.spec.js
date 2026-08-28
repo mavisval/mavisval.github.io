@@ -21,7 +21,7 @@ for (const [route, heading] of academicPages) {
   });
 }
 
-test("Beyond Research renders four stacked galleries with navigation and watermarks", async ({ page }) => {
+test("Beyond Research preserves photo proportions and supports overlaid navigation", async ({ page }, testInfo) => {
   await page.goto("interests/", { waitUntil: "domcontentloaded" });
 
   const collections = page.locator("[data-stacked-carousel]");
@@ -33,10 +33,27 @@ test("Beyond Research renders four stacked galleries with navigation and waterma
 
   const photographs = firstCollection.locator(".stacked-carousel__slide img");
   expect(await photographs.count()).toBeGreaterThan(0);
-  await expect(firstCollection.locator('[data-position="0"] img')).toBeVisible();
+  const activePhotograph = firstCollection.locator('[data-position="0"] img');
+  await expect(activePhotograph).toBeVisible();
+
+  const ratioDifference = await activePhotograph.evaluate((image) =>
+    Math.abs(image.clientWidth / image.clientHeight - image.naturalWidth / image.naturalHeight)
+  );
+  expect(ratioDifference).toBeLessThan(0.01);
+
+  const stage = firstCollection.locator(".stacked-carousel__stage");
+  await expect(stage.locator(".stacked-carousel__controls")).toHaveCount(1);
 
   await firstCollection.locator("[data-carousel-next]").click();
   await expect(counter).toContainText("2 /");
+
+  if (testInfo.project.name === "mobile") {
+    await stage.evaluate((element) => {
+      element.dispatchEvent(new PointerEvent("pointerdown", { bubbles: true, clientX: 260 }));
+      element.dispatchEvent(new PointerEvent("pointerup", { bubbles: true, clientX: 120 }));
+    });
+    await expect(counter).toContainText("3 /");
+  }
 
   const watermark = await firstCollection
     .locator('[data-position="0"]')
