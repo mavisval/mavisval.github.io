@@ -926,11 +926,14 @@ footer {
   }
 
   .navbar .navbar-nav {
+    width: fit-content;
+    margin-left: auto;
     align-items: flex-end;
   }
 
   .navbar .nav-item {
-    width: 100%;
+    width: auto;
+    text-align: right;
   }
 
   .navbar .nav-link {
