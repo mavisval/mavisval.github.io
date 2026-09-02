@@ -19,7 +19,7 @@ social: true # includes social icons at the bottom of the page
 
 <div class="about-introduction" markdown="1">
 
-I am Zhongxin Hu, a PhD candidate in Sustainable Operations Management at Eindhoven University of Technology.
+I am Zhongxin Hu (pronounced “Jong-sheen Hoo”), a PhD candidate in Sustainable Operations Management at Eindhoven University of Technology.
 
 My research helps firms design and operate circular business models, such as remanufacturing and refurbishment, to create economic, environmental, and social value.
 
