@@ -561,13 +561,13 @@ a:focus-visible {
 
 .publications h2.bibliography + ol.bibliography .title {
   margin-bottom: 0.25rem;
-  line-height: 1.3;
+  line-height: 1.42;
 }
 
 .publications h2.bibliography + ol.bibliography .author,
 .publications h2.bibliography + ol.bibliography .periodical,
 .publications h2.bibliography + ol.bibliography .paper-meta {
-  line-height: 1.38;
+  line-height: 1.55;
 }
 
 .publications h2.bibliography + ol.bibliography .paper-meta {
@@ -576,7 +576,11 @@ a:focus-visible {
 }
 
 .publications h2.bibliography + ol.bibliography .paper-presentations ul {
-  gap: 0.18rem;
+  gap: 0.3rem;
+}
+
+.publications h2.bibliography + ol.bibliography .paper-presentations li {
+  line-height: 1.5;
 }
 
 html[data-theme="dark"] .paper-status strong,
