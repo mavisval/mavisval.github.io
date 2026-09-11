@@ -19,10 +19,8 @@ social: true # includes social icons at the bottom of the page
 
 <div class="about-introduction" markdown="1">
 
-I am Zhongxin Hu (pronounced “Jong-sheen Hoo”), a PhD candidate in Sustainable Operations Management at Eindhoven University of Technology.
+My research is in sustainable operations and supply chain management. I am especially interested in circular business models, such as remanufacturing and refurbishment, and in how firms can make operational decisions that create economic value while also improving environmental and societal outcomes. I mainly use analytical modeling and optimization in my work.
 
-My research helps firms design and operate circular business models, such as remanufacturing and refurbishment, to create economic, environmental, and social value.
-
-My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games.
+I am also interested in pricing and equilibrium analysis in queueing systems and sequential games.
 
 </div>
