@@ -9,7 +9,7 @@ nav_order: 7
 <div class="beyond-research-introduction">
   <p>Beyond research, I find joy in photography, camping, and wandering through flea markets.</p>
 
-  <p>Travel introduces me to new places, new people, and the cultures that shape their ways of life. Along the way, photography allows me to pause, observe more closely, and preserve moments for years to come. Below is a selection of photographs I have captured on these journeys.</p>
+  <p>Travel introduces me to new places, new people, and the cultures that shape their ways of life. Along the way, photography allows me to preserve moments for years to come. Below is a selection of photographs I have captured on these journeys.</p>
 </div>
 
 {% assign photo_collections = site.data.photo_collections | sort: "collection_order" %}
