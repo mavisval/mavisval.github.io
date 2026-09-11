@@ -19,7 +19,8 @@ social: true # includes social icons at the bottom of the page
 
 <div class="about-introduction" markdown="1">
 
-I’m Zhongxin Hu (pronounced “Jong-sheen Hoo”), a PhD candidate in Operations Management at Eindhoven University of Technology and currently a visiting PhD student at INSEAD. I expect to complete my PhD in 2027.
+I’m Zhongxin Hu (pronounced “Jong-sheen Hoo”), a PhD candidate in Operations Management at Eindhoven University of Technology and currently a visiting PhD student at INSEAD.<br>
+I expect to complete my PhD in 2027.
 
 My research focuses on sustainable operations and supply chain management. I’m particularly interested in circular business models, such as remanufacturing and refurbishment, and in how firms can design operational strategies that create economic value while also improving environmental and societal outcomes. My work primarily uses analytical modeling and optimization.
 
