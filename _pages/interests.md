@@ -41,7 +41,7 @@ nav_order: 7
           {% assign photo_extension = photo.extname | downcase %}
           {% if photo.path contains collection.dir and photo_extensions contains photo_extension %}
             <figure class="stacked-carousel__slide" data-slide-index="{{ photo_number }}">
-              <img src="{{ photo.path | relative_url }}" alt="{{ collection.collection_name }} photograph {{ photo_number | plus: 1 }}" loading="lazy" decoding="async">
+              <img{% if photo_number == 0 %} src="{{ photo.path | relative_url }}"{% else %} data-src="{{ photo.path | relative_url }}"{% endif %} alt="{{ collection.collection_name }} photograph {{ photo_number | plus: 1 }}" loading="lazy" decoding="async">
             </figure>
             {% assign photo_number = photo_number | plus: 1 %}
           {% endif %}
@@ -101,7 +101,23 @@ nav_order: 7
       const counter = carousel.querySelector('.photo-collection__counter');
       const stage = carousel.querySelector('.stacked-carousel__stage');
       let active = 0;
+      let initialized = false;
       let pointerStart = null;
+
+      const relativeOffset = (index) => {
+        let offset = index - active;
+        if (offset > slides.length / 2) offset -= slides.length;
+        if (offset < -slides.length / 2) offset += slides.length;
+        return offset;
+      };
+
+      const loadImage = (slide) => {
+        const image = slide.querySelector('img');
+        if (!image.getAttribute('src') && image.dataset.src) {
+          image.src = image.dataset.src;
+          image.removeAttribute('data-src');
+        }
+      };
 
       const updateRatio = () => {
         const image = slides[active].querySelector('img');
@@ -115,9 +131,8 @@ nav_order: 7
 
       const render = () => {
         slides.forEach((slide, index) => {
-          let offset = index - active;
-          if (offset > slides.length / 2) offset -= slides.length;
-          if (offset < -slides.length / 2) offset += slides.length;
+          const offset = relativeOffset(index);
+          if (Math.abs(offset) <= 2) loadImage(slide);
           slide.dataset.position = Math.abs(offset) <= 2 ? offset : 'hidden';
           slide.setAttribute('aria-hidden', offset === 0 ? 'false' : 'true');
         });
@@ -125,6 +140,12 @@ nav_order: 7
         const activeImage = slides[active].querySelector('img');
         if (activeImage.complete) updateRatio();
         else activeImage.addEventListener('load', updateRatio, { once: true });
+      };
+
+      const initialize = () => {
+        if (initialized) return;
+        initialized = true;
+        render();
       };
 
       const move = (step) => { active = (active + step + slides.length) % slides.length; render(); };
@@ -144,7 +165,19 @@ nav_order: 7
         pointerStart = null;
       });
       stage.addEventListener('pointercancel', () => { pointerStart = null; });
-      render();
+      carousel.addEventListener('focusin', initialize, { once: true });
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            initialize();
+            observer.disconnect();
+          }
+        }, { rootMargin: '400px 0px' });
+        observer.observe(carousel);
+      } else {
+        initialize();
+      }
     });
   })();
 </script>

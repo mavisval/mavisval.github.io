@@ -33,6 +33,7 @@ test("Beyond Research preserves photo proportions and supports overlaid navigati
 
   const photographs = firstCollection.locator(".stacked-carousel__slide img");
   expect(await photographs.count()).toBeGreaterThan(0);
+  expect(await firstCollection.locator(".stacked-carousel__slide img[src]").count()).toBeLessThanOrEqual(5);
   const activePhotograph = firstCollection.locator('[data-position="0"] img');
   await expect(activePhotograph).toBeVisible();
 
