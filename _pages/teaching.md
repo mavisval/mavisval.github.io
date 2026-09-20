@@ -43,24 +43,9 @@ nav_order: 2
   <section class="teaching-group">
     <p class="teaching-label">Supervision</p>
     <article>
-      <h2>Bachelor End Projects</h2>
+      <h2>Four Bachelor End Projects</h2>
       <p>Eindhoven University of Technology</p>
-      <time>Fall 2026/27</time>
-    </article>
-    <article>
-      <h2>Condition-Based Maintenance Policy for Bearings: Minimizing Total Expected Cost Rate</h2>
-      <p>Bachelor End Project · Eindhoven University of Technology</p>
-      <time>Spring 2025/26</time>
-    </article>
-    <article>
-      <h2>Expanding Manual Labor Modeling in a Front-End Semiconductor Fab: A Case Study at NXP Semiconductors</h2>
-      <p>Bachelor End Project · Eindhoven University of Technology</p>
-      <time>Spring 2024/25</time>
-    </article>
-    <article>
-      <h2>Optimizing the Pay-Per-Use Price and Time of Remanufacturing for Leasing Advanced Medical Devices to Hospitals in Underdeveloped Countries</h2>
-      <p>Bachelor End Project · Eindhoven University of Technology</p>
-      <time>Fall 2024/25</time>
+      <time>2024/25–2026/27</time>
     </article>
   </section>
 </div>
