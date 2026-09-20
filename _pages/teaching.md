@@ -8,7 +8,7 @@ nav_order: 2
 
 <div class="teaching-experience">
   <section class="teaching-group">
-    <p class="teaching-label">Teaching BSc</p>
+    <p class="teaching-label">Teaching Assistant · BSc</p>
     <article>
       <h2>Fundamentals of Operations Management</h2>
       <p>Eindhoven University of Technology</p>
@@ -32,7 +32,7 @@ nav_order: 2
   </section>
 
   <section class="teaching-group">
-    <p class="teaching-label">Teaching MSc</p>
+    <p class="teaching-label">Teaching Assistant · MSc</p>
     <article>
       <h2>Reinforcement Learning: Theory and Applications</h2>
       <p>Beijing University of Posts and Telecommunications</p>
