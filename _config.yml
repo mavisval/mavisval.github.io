@@ -10,7 +10,9 @@ contact_note: >
   For research-related inquiries, please contact me by email.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Zhongxin Hu is a PhD candidate in Operations Management at Eindhoven University of Technology researching sustainable operations management, circular business models, and strategic decision-making.
-footer_text:
+footer_text: >-
+  Page views: <span id="busuanzi_site_pv" aria-live="polite">Loading...</span>
+  <script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
 keywords: zhongxin hu, sustainable operations management, circular business models, remanufacturing, refurbishment, queueing systems, behavioral operations, sequential games # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.svg # the favicon image in /assets/img/
