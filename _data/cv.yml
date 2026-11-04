@@ -4,7 +4,7 @@ cv:
   email: z.hu1@tue.nl
   location: Eindhoven, The Netherlands
   image: ""
-  summary: "My research focuses on sustainable operations management. I study circular business models, such as remanufacturing and refurbishment, that enable firms to make decisions that are economically, environmentally, and socially beneficial. My broader research interests include pricing and equilibrium analysis in queueing systems, behavioral operations, and sequential games."
+  summary: "My research focuses on sustainable operations and supply chain management. I study how firms can design circular business models, such as remanufacturing and refurbishment, as well as other operational strategies that create economic value while improving environmental and societal outcomes. My work primarily uses analytical modeling and optimization. My broader research interests include pricing and equilibrium analysis in queueing systems and sequential games."
 
   social_networks:
     - network: LinkedIn
@@ -21,10 +21,19 @@ cv:
         area: Operations Management
         studyType: Ph.D. Candidate
         start_date: 2023-07
-        end_date: Ongoing
+        end_date: Expected 2027
         highlights:
           - "Supervisors: Zümbül Atan and Christina Imdahl"
           - "Group: Operations, Planning, Accounting & Control (OPAC)"
+
+      - institution: INSEAD
+        location: Fontainebleau, France
+        area: Visiting Researcher
+        start_date: 2026-09
+        end_date: 2026-12
+        highlights:
+          - "Host Professor: Luk van Wassenhove"
+          - "Groups: Sustainable Business Initiative & Humanitarian Research Group"
 
       - institution: Beijing University of Posts and Telecommunications (BUPT)
         location: Beijing, China
@@ -34,7 +43,6 @@ cv:
         end_date: 2023-06
         highlights:
           - "Supervisor: Yongjiang Guo"
-          - "Honor: Outstanding Graduate Student Award"
           - "Thesis: Information Disclosure and Reference Dependence in the Cooperative Newsvendor Problem"
 
       - institution: Nanjing University of Posts and Telecommunications
@@ -43,36 +51,29 @@ cv:
         studyType: B.Sc.
         start_date: 2015-09
         end_date: 2019-06
-        highlights:
-          - "Honor: Merit Undergraduate Student Award"
 
     Experience:
       - company: LINear to CIrcular Transition (LINCIT)
         position: Researcher
         start_date: 2023-07
         end_date: 2026-06
-        summary: Studied operational decisions in circular business models (remanufacturing, refurbishment) and presented progress reports to consortium partners.
+        summary: Conducted research on operational decisions in circular business models, including remanufacturing and refurbishment, and presented research progress to academic and industry consortium partners.
 
       - company: Post-Graduate Innovation and Entrepreneurship Project
         position: Project Leader
         start_date: 2022-04
         end_date: 2022-11
-        summary: Integrated sequential game-theoretic models with prospect theory and contract theory to optimize computational resource allocation in blockchain; conducted literature review of 70+ papers.
-
-      - company: China Contemporary Undergraduate Mathematical Contest in Modeling
-        position: Participant
-        start_date: 2017-09
-        end_date: 2017-09
-        summary: "Developed a joint pricing and allocation model for crowdsourced task platforms and implemented numerical experiments to develop optimal allocation policies. Award: Provincial First Prize, Jiangsu Province."
+        summary: Developed analytical models combining sequential game theory, prospect theory, and contract theory to study computational-resource allocation in blockchain systems.
 
     Volunteer:
       - company: Lumiere Research Inclusion Foundation (Lumiere Education)
-        position: Volunteer Mentor
+        position: Research Mentor
         start_date: 2026
         end_date: 2026
 
       - company: INFORMS Annual Meeting
         position: Session Chair
+        location: Atlanta, USA
         start_date: 2025
         end_date: 2025
 
@@ -87,9 +88,23 @@ cv:
         end_date: 2022
 
     Awards:
+      - title: Best Presentation Award
+        issuer: OPAC Conference
+        location: Heeze, the Netherlands
+        date: 2026
+
       - title: Outstanding Graduate Student Award
         issuer: Beijing University of Posts and Telecommunications
         date: 2023
+
+      - title: Provincial First Prize
+        issuer: China Contemporary Undergraduate Mathematical Contest in Modeling
+        location: Jiangsu Province, China
+        date: 2017
+
+      - title: Merit Undergraduate Student Award
+        issuer: Nanjing University of Posts and Telecommunications
+        date: 2016
 
     Working Papers:
       - title: "Profit Meets Purpose: Refurbish-to-Lease Model for Medical Essentials"
@@ -98,18 +113,18 @@ cv:
           - Christina Imdahl
           - Yeqing Zhou
           - Zümbül Atan
-        status: Under Review
-        notes: "Conference presentations: 2026 POMS SCM Research Webinar (Online); OPAC Conference (Best Presentation Award); Circularity and Sustainability Workshop (Poster), Utrecht, NL. 2025 INFORMS Annual Meeting, Atlanta, USA; Beta Symposium, Soesterberg, NL."
+        notes: "Conference presentations: 2026 INFORMS Annual Meeting, San Francisco, USA; POMS SCM Research Webinar (Online); OPAC Conference, Heeze, NL; Circularity and Sustainability Workshop (Poster), Utrecht, NL. 2025 Beta Symposium, Soesterberg, NL."
 
+    Papers:
       - title: "Strategic Selection of Remanufacturing Business Models: A Consumer Perception Perspective"
         authors:
           - Zhongxin Hu
           - Christina Imdahl
           - Zümbül Atan
-        status: Under Second-round Review
-        notes: "Conference presentations: 2026 OPAC Conference, Heeze, NL; 2025 International Symposium on Inventories, Budapest, HU."
+        publisher: European Journal of Operational Research
+        year: 2026
+        doi: 10.1016/j.ejor.2026.10.041
 
-    Papers:
       - title: The Effect of Loss Preference on Queueing with Information Disclosure Policy
         authors:
           - Cao, J.
@@ -153,6 +168,7 @@ cv:
       - role: Supervisor of Bachelor End Projects
         institution: Eindhoven University of Technology (TU/e)
         term: 2024/25 - 2026/27
+        details: Supervised 4 Bachelor’s End Projects
 
     Projects:
       - name: LINear to CIrcular Transition (LINCIT)
